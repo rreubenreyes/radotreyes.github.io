@@ -1,0 +1,27 @@
+@import url( 'https://fonts.googleapis.com/css?family=Dosis|Inconsolata' );
+
+body {
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Dosis', sans-serif;
+}
+
+div.content-row {
+  border: #000 solid black;
+  padding: 2em 0 2em 0;
+}
+
+div.content-row > div.ele {
+  padding: 2em;
+}
+
+div.content-row p {
+  color: #4e4e4e;
+}
+
+div.r1c1 {
+  background-color: #96c0d9;
+}
+
+div.r1c2 {
+  background-color: #ffd195;
+}
