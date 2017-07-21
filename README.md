@@ -6,3 +6,4 @@ I’m a recently graduated Mechanical Engineer with a passion for programming, c
 
 ## Sites maintained:
 I'm Silent Photography [http://imsilentphotography.net](imsilentphotography.net)
+.. Photography portfolio website of Mary Medovich (Instagram: @imsilentphotography), a freelance photographer based out of Tampa, FL. Site designed front-end with Bootstrap, jQuery. Django back-end to handle and serve media uploads based on category and sorting fields, forgoing pre-built CMS.
