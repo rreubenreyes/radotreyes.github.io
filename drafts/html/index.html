@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Reuben Reyes</title>
 
+    <!-- FA Icons -->
+    <script src="https://use.fontawesome.com/454514cdba.js"></script>
+
     <!-- Bootstrap v3 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -11,51 +14,220 @@
     <link rel="stylesheet" href="/home/ruby/Dropbox/repos/_webdev/reubenreyes-portfolio/drafts/css/style.css">
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="jumbotron">
-        <h1>
-          Reuben Reyes
-        </h1>
-        <p>
-          &emsp;Web developer, mechatronics engineer, software engineer
-        </p>
-      </div> <!-- jumbotron -->
-
-      <div name="r1" class="row content-row">
-        <div name="r1c1" class="col-xs-12 col-md-6 ele r1c1">
-          <h3><strong>About:</strong></h3>
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
-            <h4>Background</h4>
-            <p>
-              I’m a recently graduated Mechanical Engineer with a passion for programming, computer science, and software development. My concentration in Mechatronics has given me ample experience in the concurrent engineering design process through diverse projects. I’ve learned how to approach problems from many perspectives to find the best solution. I’ve relentlessly scoured software libraries in an effort to arrive at final product that was not only functional, but polished, responsive, and robust. This drive has led me to individually pursue web and game development, learning many tools along the way.
-            <p>
+    <div id="wrapper" ng-app="port" ng-controller="content">
+      <!-- Hero section -->
+      <div class="fullscreen-hero">
+        <div class="hero-image">
+          <div class="hero-container">
+            <div class="hero-content">
+              <h1>Reuben Reyes</h1>
+              <p>Mechanical engineer, software engineer, web developer</p><br>
+              <p class="ghost"><small>I'm available for hire</small></p>
+            </div>
           </div>
-        </div> <!-- r1c1 -->
+        </div>
+      </div>
 
-        <div name="r1c2" class="col-xs-12 col-md-6 ele r1c2">
-          <h3><strong>Sites maintained:</strong></h3>
-          <div class="col-xs-12 col-md-10 col-md-offset-1">
-            <h4>
-              <em>I'm Silent Photography&nbsp;</em>
-              <a href="http://imsilentphotography.net">
-                (http://imsilentphotography.net)
-              </a>
-            </h4>
-            <p>
-              Photography portfolio website of Mary Medovich (Instagram: @imsilentphotography), a freelance photographer based out of Tampa, FL. Site designed front-end with Bootstrap, jQuery. Django back-end to handle and serve media uploads based on category and sorting fields, forgoing pre-built CMS.
-            </p>
+      <!-- About Me section -->
+      <section id="me">
+        <div class="container skew">
+          <div class="row pretty-row">
+            <div class="col-xs-12 section-header">
+              <h1>Expertise</h1>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="content-header-tall">
+                  I hold a B.S. Mechanical Engineering from San Jose State University. I've got a diverse skillset ranging from solid modeling, to automation scripting, to full-stack development.
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-md-4 lafayette">
+                <div class="bubble content-header">
+                  <div class="bubble-content">
+                    <span class="glyphicon glyphicon-cog"></span>
+                  </div>
+                  <div class="bubble-text">
+                    <strong>Mechatronic Systems</strong>
+                  </div>
+                </div>
+                {{ lafayette }}
+              </div>
+              <div class="col-xs-12 col-md-4 lafayette">
+                <div class="bubble content-header">
+                  <div class="bubble-content">
+                    <span class="glyphicon glyphicon-sort"></span>
+                  </div>
+                  <div class="bubble-text">
+                    <strong>Controls and Automation</strong>
+                  </div>
+                </div>
+                {{ mulligan }}
+              </div>
+              <div class="col-xs-12 col-md-4 lafayette">
+                <div class="bubble content-header">
+                  <div class="bubble-content">
+                    <span class="glyphicon glyphicon-console"></span>
+                  </div>
+                  <div class="bubble-text">
+                    <strong>Full-Stack Development</strong>
+                  </div>
+                </div>
+                {{ laurens }}
+              </div>
+            </div>
+
+            <div class="section-footer"></div>
+
           </div>
-        </div> <!-- r1c2-->
-      </div> <!-- r1 -->
-    </div> <!-- container-fluid -->
+        </div>
+      </section>
 
+      <!-- Projects section -->
+      <section id="projects">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="section-header">
+                <h1>Engineering Projects</h1>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="content-header-tall">
+                As a mechanical engineer, I've gotten my hands dirty while taking on innovative projects.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-4 lafayette">
+              {{ lafayette }}
+            </div>
+            <div class="col-xs-12 col-md-8 mulligan">
+              {{ mulligan }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-8 mulligan">
+              {{ mulligan }}
+            </div>
+            <div class="col-xs-12 col-md-4 laurens">
+              {{ laurens }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-4 lafayette">
+              {{ lafayette }}
+            </div>
+            <div class="col-xs-12 col-md-8 mulligan">
+              {{ mulligan }}
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer"></div>
+
+      </section>
+
+      <!-- In Progress section -->
+      <section id="wip">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 section-header">
+              <h1>Development Projects</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content-header-tall">
+              My skillset as a developer grows rapidly every day, and my work only gets more ambitious.
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="col-heading lafayette">
+                {{ ham }}
+              </div>
+              <div class="col-heading mulligan">
+                {{ ilton }}
+              </div>
+            </div>
+
+            <div class="col-xs-6">
+              <div class="col-heading mulligan">
+                {{ ham }}
+              </div>
+              <div class="col-heading lafayette">
+                {{ ilton }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer"></div>
+
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="section-header">
+            <p>Website © 2017, Reuben Reyes.</p>
+          </div>
+          <div class="row">
+            <div class="bubble">
+              <div class="col-xs-3">
+                <a href="#"><div class="bubble-content">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </div></a>
+              </div>
+              <div class="col-xs-3">
+                <a href="#"><div class="bubble-content">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </div></a>
+              </div>
+              <div class="col-xs-3">
+                <a href="#"><div class="bubble-content">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div></a>
+              </div>
+              <div class="col-xs-3">
+                <a href="#"><div class="bubble-content">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </footer>
+    </div> <!-- #wrapper -->
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+    <!-- Angular 1.6.1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-touch.min.js"></script>
+
     <!-- Bootstrap 3 JavaScript-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+    angular.module( 'port', [] )
+      .controller( 'content', function( $scope ) {
+        $scope.header = "Maverick is cool";
+        $scope.ham = "I imagine death so much it feels more like a memory. When’s it gonna get me? In my sleep? Seven feet ahead of me? If I see it comin’, do I run or do I let it be? Is it like a beat without a melody?";
+        $scope.ilton = "See, I never thought I’d live past twenty; where I come from some get half as many. Ask anybody why we livin’ fast and we laugh, reach for a flask. We have to make this moment last, that’s plenty!";
+        $scope.lafayette = 'I dream of life without a monarchy. The unrest in France will lead to ‘onarchy? ‘Onarchy? How you say, how you say, ‘anarchy?’ When I fight, I make the other side panicky with my...';
+        $scope.mulligan = 'Yo, I’m a tailor’s apprentice and I got y’all knuckleheads in loco parentis. I’m joining the rebellion cuz I know it’s my chance to socially advance, instead of sewin’ some pants! I’m gonna take a...';
+        $scope.laurens = 'But we’ll never be truly free until those in bondage have the same rights as you and me You and I. Do or die. Wait till I sally in on a stallion with the first black battalion! Have another...';
+        $scope.content = 'Mollis parturient a sociis a ipsum parturient facilisis semper at a eros etiam a amet sed posuere sit ut luctus semper odio varius consectetur. Mattis ac a nulla eu hendrerit ad gravida faucibus varius urna orci dui suspendisse congue adipiscing etiam duis. Velit ligula ac a blandit magna suspendisse adipiscing blandit a ad ultrices montes adipiscing dictumst suspendisse placerat sociis habitant nunc ligula vestibulum in parturient risus nisl sodales dis vel. A vel sit adipiscing sed consequat nam cubilia fusce orci class tempor facilisis primis at vestibulum. Ullamcorper a eu ut parturient consequat nec mauris dis sed vestibulum potenti faucibus a dis sem a condimentum convallis viverra cum cum adipiscing adipiscing parturient parturient. Dictumst phasellus consectetur rhoncus venenatis condimentum purus ad mus nascetur facilisis class condimentum arcu tellus nunc a sed elit integer scelerisque habitasse.';
+      } ) ;
+    </script>
   </body>
 </html>
