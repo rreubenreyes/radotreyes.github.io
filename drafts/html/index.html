@@ -22,7 +22,9 @@
             <div class="hero-content">
               <h1>Reuben Reyes</h1>
               <p>Mechanical engineer, software engineer, web developer</p><br>
-              <p class="ghost"><small>I'm available for hire</small></p>
+              <div class="ghost">
+                <small>I'M AVAILABLE FOR HIRE</small>
+              </div>
             </div>
           </div>
         </div>
@@ -31,7 +33,7 @@
       <!-- About Me section -->
       <section id="me">
         <div class="container skew">
-          <div class="row pretty-row">
+          <div class="row">
             <div class="col-xs-12 section-header">
               <h1>Expertise</h1>
             </div>
@@ -42,45 +44,50 @@
                 </div>
               </div>
             </div>
+
             <div class="row">
               <div class="col-xs-12 col-md-4 lafayette">
                 <div class="bubble content-header">
-                  <div class="bubble-content">
+                  <div class="bubble-content mechatronics">
                     <span class="glyphicon glyphicon-cog"></span>
                   </div>
                   <div class="bubble-text">
                     <strong>Mechatronic Systems</strong>
                   </div>
                 </div>
-                {{ lafayette }}
+                <div class="lafayette">
+                  {{ lafayette }}
+                </div>
               </div>
               <div class="col-xs-12 col-md-4 lafayette">
                 <div class="bubble content-header">
-                  <div class="bubble-content">
+                  <div class="bubble-content controls">
                     <span class="glyphicon glyphicon-sort"></span>
                   </div>
                   <div class="bubble-text">
                     <strong>Controls and Automation</strong>
                   </div>
                 </div>
-                {{ mulligan }}
+                <div class="lafayette">
+                  {{ lafayette }}
+                </div>
               </div>
               <div class="col-xs-12 col-md-4 lafayette">
                 <div class="bubble content-header">
-                  <div class="bubble-content">
+                  <div class="bubble-content dev">
                     <span class="glyphicon glyphicon-console"></span>
                   </div>
                   <div class="bubble-text">
                     <strong>Full-Stack Development</strong>
                   </div>
                 </div>
-                {{ laurens }}
+                <div class="lafayette">
+                  {{ lafayette }}
+                </div>
               </div>
             </div>
-
-            <div class="section-footer"></div>
-
           </div>
+          <div class="section-footer"></div>
         </div>
       </section>
 
@@ -101,28 +108,45 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-4 lafayette">
-              {{ lafayette }}
+          <div class="row section-header">
+            <div class="col-xs-12 col-md-4 project-thumb">
+              <img src="main/seniorproject2.jpg" alt="">
             </div>
-            <div class="col-xs-12 col-md-8 mulligan">
-              {{ mulligan }}
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-8 mulligan">
-              {{ mulligan }}
-            </div>
-            <div class="col-xs-12 col-md-4 laurens">
-              {{ laurens }}
+            <div class="col-xs-12 col-md-8 project-desc">
+              <h3><strong>Pathway to Engineering</strong></h3>
+              <small>A breakthrough program with Independence High School (IHS), San Jose, CA which connects students to college STEM programs. We repaired a power dynamometer, fabricated new fixtures, and developed software to transform part of IHS' auto shop into an engineering lab. Introduced a curriculum involving key engineering topics to fulfill a long-term goal in bringing San Jose's students into the STEM field.</small>
+
+              <div class="ghost">
+                <small>SEE MORE</small>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-4 lafayette">
-              {{ lafayette }}
+          <div class="separator"></div>
+
+          <div class="row section-header">
+            <div class="col-xs-12 col-md-4 col-md-push-8 project-thumb">
+              <img src="main/bike.jpg" alt="">
             </div>
-            <div class="col-xs-12 col-md-8 mulligan">
-              {{ mulligan }}
+            <div class="col-xs-12 col-md-8 col-md-pull-4 project-desc">
+              <h3><strong>Automatic Bicycle Shifter</strong></h3>
+              <small>An automated alternative to the traditional bicycle shifting system. Developed from scratch, this design incorporates magnetic sensors and an Arduino microcontroller to listen for changes in the rider's cadence and RPMs. The automatic bicycle shifter uses that information to shift to the optimal gear, performing responsively and robustly even going up steep inclines and at high speeds.</small>
+              <div class="ghost">
+                <small>SEE MORE</small>
+              </div>
+            </div>
+          </div>
+          <div class="separator"></div>
+
+          <div class="row section-header">
+            <div class="col-xs-12 col-md-4 project-thumb">
+              <img src="main/minseg.jpg" alt="">
+            </div>
+            <div class="col-xs-12 col-md-8 project-desc">
+              <h3><strong>"Segway" Robot Stabilization</strong></h3>
+              <small>Designed and implemented a program that allowed a miniature "Segway" robot to stand up on its own. Wrote scripts in MATLAB and designed a controller in Simulink, both of which worked together to utilize on-board sensors to listen for and respond to destabilizing forces which would otherwise topple the robot.</small>
+              <div class="ghost">
+                <small>SEE MORE</small>
+              </div>
             </div>
           </div>
         </div>
@@ -145,34 +169,43 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-6">
-              <div class="col-heading lafayette">
-                {{ ham }}
+            <div class="col-xs-12 col-md-6">
+              <div class="col-heading wip-thumb">
+                <img src="main/imsilent.jpg" alt="">
               </div>
-              <div class="col-heading mulligan">
-                {{ ilton }}
+              <div class="col-heading section-header wip-desc">
+                <h3>I'm Silent Photography</h3>
+                <h5>Full-Stack Development. Django, Python, JavaScript, Bootstrap.</h5>
+                <small>Mary Medovich is a photographer based out of Tampa, FL. She has a gift for rearranging nature's details into perfect picture frames that even the trained eye wouldn't think to notice.</small>
+                <div class="ghost">
+                  <small>VISIT THE WEBSITE</small>
+                </div>
               </div>
+              <div class="section-footer hidden-md"></div>
             </div>
 
-            <div class="col-xs-6">
-              <div class="col-heading mulligan">
-                {{ ham }}
+
+            <div class="col-xs-12 col-md-6">
+              <div class="col-heading wip-thumb">
+                <img src="main/bagels.jpg" alt="">
               </div>
-              <div class="col-heading lafayette">
-                {{ ilton }}
+              <div class="col-heading section-header wip-desc">
+                <h3>Bagel Defender</h3>
+                <h5>C#, Unity3D, Adobe CC</h5>
+                <small>A homage to Galaga, but with a unique added experience: Now you know what your server felt like when you were rude to them that one night at Olive Garden. Bagel Defender was a passioned collaboration with Zelly Thomas.</small>
+                <div class="ghost">
+                  <small>PLAY THE GAME</small>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="section-footer"></div>
-
       </section>
 
       <footer>
         <div class="container">
           <div class="section-header">
-            <p>Website © 2017, Reuben Reyes.</p>
+            <p>Website © Reuben Reyes, 2017.</p>
           </div>
           <div class="row">
             <div class="bubble">
