@@ -12,9 +12,13 @@
 
     <!-- Custom -->
     <link rel="stylesheet" href="/home/ruby/Dropbox/repos/_webdev/reubenreyes-portfolio/drafts/css/style.css">
+
+    <!-- React 15.6.1 -->
+    <script src="https://unpkg.com/react@15.6.1/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15.6.1/dist/react-dom.min.js"></script>
   </head>
   <body>
-    <div id="wrapper" ng-app="port" ng-controller="content">
+    <div id="wrapper">
       <!-- Hero section -->
       <div class="fullscreen-hero">
         <div class="hero-image">
@@ -34,7 +38,7 @@
       <section id="me">
         <div class="container skew">
           <div class="row">
-            <div class="col-xs-12 section-header">
+            <div class="col-xs-12 section-header-tall">
               <h1>Expertise</h1>
             </div>
             <div class="row">
@@ -46,43 +50,43 @@
             </div>
 
             <div class="row">
-              <div class="col-xs-12 col-md-4 lafayette">
+              <div class="col-xs-12 col-md-4 me-pane">
                 <div class="bubble content-header">
                   <div class="bubble-content mechatronics">
-                    <span class="glyphicon glyphicon-cog"></span>
+                    <i class="fa fa-cog" aria-hidden="true"></i>
                   </div>
                   <div class="bubble-text">
-                    <strong>Mechatronic Systems</strong>
+                    <strong>Mechatronics and Controls</strong>
                   </div>
                 </div>
-                <div class="lafayette">
-                  {{ lafayette }}
+                <div class="desc">
+                  <p>Building a robot involves wiring motors to circuit boards, laser-cutting acrylic parts, and writing programs that tell the robot what to do. Four years of interdisciplinary projects has made me multi-faceted and versatile as an engineer.</p>
                 </div>
               </div>
-              <div class="col-xs-12 col-md-4 lafayette">
+              <div class="col-xs-12 col-md-4 me-cell">
                 <div class="bubble content-header">
                   <div class="bubble-content controls">
-                    <span class="glyphicon glyphicon-sort"></span>
+                    <i class="fa fa-magic" aria-hidden="true"></i>
                   </div>
                   <div class="bubble-text">
-                    <strong>Controls and Automation</strong>
+                    <strong>UX/UI Design</strong>
                   </div>
                 </div>
-                <div class="lafayette">
-                  {{ lafayette }}
+                <div class="desc">
+                  <p>I design interfaces with focus on content structure, minimalism, and immense attention-to-detail. Interacting with a website should be natural; my style is clean, consistent, and modern.</p>
                 </div>
               </div>
-              <div class="col-xs-12 col-md-4 lafayette">
+              <div class="col-xs-12 col-md-4 me-cell">
                 <div class="bubble content-header">
                   <div class="bubble-content dev">
-                    <span class="glyphicon glyphicon-console"></span>
+                    <i class="fa fa-code" aria-hidden="true"></i>
                   </div>
                   <div class="bubble-text">
                     <strong>Full-Stack Development</strong>
                   </div>
                 </div>
-                <div class="lafayette">
-                  {{ lafayette }}
+                <div class="desc">
+                  <p>I'm comfortable on both sides of a development project. I've mapped out website back-ends in Django while coding the front-end CSS and logic myself, and programmed video games in C# while drafting my own sprites in Illustrator.</p>
                 </div>
               </div>
             </div>
@@ -109,14 +113,23 @@
             </div>
           </div>
           <div class="row section-header">
+            <div class="">
+
+            </div>
             <div class="col-xs-12 col-md-4 project-thumb">
               <img src="main/seniorproject2.jpg" alt="">
             </div>
-            <div class="col-xs-12 col-md-8 project-desc">
-              <h3><strong>Pathway to Engineering</strong></h3>
-              <small>A breakthrough program with Independence High School (IHS), San Jose, CA which connects students to college STEM programs. We repaired a power dynamometer, fabricated new fixtures, and developed software to transform part of IHS' auto shop into an engineering lab. Introduced a curriculum involving key engineering topics to fulfill a long-term goal in bringing San Jose's students into the STEM field.</small>
+            <div class="col-xs-12 col-md-8">
+              <div class="title">
+                <h3><strong>Pathway to Engineering</strong></h3>
+                <h5><span class="complement">*</span>HEV/EV theory, solid modeling, metalworking, welding, scripting (Visual Basic).</h5>
+              </div>
 
-              <div class="ghost">
+              <div class="desc project-desc">
+                <p>A breakthrough program with <a href="https://ihs.schoolloop.com/">Independence High School</a> (IHS), San Jose, CA which connects students to college STEM programs. We repaired a power dynamometer, fabricated new fixtures, and developed software to transform part of IHS' auto shop into an engineering lab. Introduced a curriculum involving key engineering topics to fulfill a long-term goal in bringing San Jose's students into the STEM field.</p>
+              </div>
+
+              <div class="bt bt-ghost">
                 <small>SEE MORE</small>
               </div>
             </div>
@@ -124,27 +137,49 @@
           <div class="separator"></div>
 
           <div class="row section-header">
-            <div class="col-xs-12 col-md-4 col-md-push-8 project-thumb">
-              <img src="main/bike.jpg" alt="">
+            <div class="col-xs-12 col-md-4 col-md-push-8">
+              <div class="project-thumb">
+                <img src="main/bike.jpg" alt="">
+              </div>
             </div>
-            <div class="col-xs-12 col-md-8 col-md-pull-4 project-desc">
-              <h3><strong>Automatic Bicycle Shifter</strong></h3>
-              <small>An automated alternative to the traditional bicycle shifting system. Developed from scratch, this design incorporates magnetic sensors and an Arduino microcontroller to listen for changes in the rider's cadence and RPMs. The automatic bicycle shifter uses that information to shift to the optimal gear, performing responsively and robustly even going up steep inclines and at high speeds.</small>
+
+            <div class="col-xs-12 col-md-8 col-md-pull-4">
+              <div class="title">
+                <h3><strong>Automatic Bicycle Shifter</strong></h3>
+                <h5><span class="complement">*</span>Mechatronics, electronic prototyping, solid modeling, scripting (Arduino).</h5>
+              </div>
+
+              <div class="desc project-desc">
+                <p>An automated alternative to the traditional bicycle shifting system. Developed from scratch, this design incorporates magnetic sensors and an Arduino microcontroller to listen for changes in the rider's cadence and RPMs. The automatic bicycle shifter uses that information to shift to the optimal gear, performing responsively and robustly even going up steep inclines and at high speeds.</p>
+              </div>
+
               <div class="ghost">
                 <small>SEE MORE</small>
               </div>
             </div>
           </div>
+
           <div class="separator"></div>
 
           <div class="row section-header">
-            <div class="col-xs-12 col-md-4 project-thumb">
-              <img src="main/minseg.jpg" alt="">
+
+            <div class="col-xs-12 col-md-4">
+              <div class="project-thumb">
+                <img src="main/minseg.jpg" alt="">
+              </div>
             </div>
-            <div class="col-xs-12 col-md-8 project-desc">
-              <h3><strong>"Segway" Robot Stabilization</strong></h3>
-              <small>Designed and implemented a program that allowed a miniature "Segway" robot to stand up on its own. Wrote scripts in MATLAB and designed a controller in Simulink, both of which worked together to utilize on-board sensors to listen for and respond to destabilizing forces which would otherwise topple the robot.</small>
-              <div class="ghost">
+
+            <div class="col-xs-12 col-md-8">
+              <div class="title">
+                <h3><strong>"Segway" Robot Stabilization</strong></h3>
+                <h5><span class="complement">*</span>State-space modeling, digital controls, MATLAB, Simulink.</h5>
+              </div>
+
+              <div class="desc project-desc">
+                <p>Designed and implemented a program that allowed a miniature "Segway" robot to stand up on its own. Wrote scripts in MATLAB and designed a controller in Simulink, both of which worked together to utilize on-board sensors to listen for and respond to destabilizing forces which would otherwise topple the robot.</p>
+              </div>
+
+              <div class="bt bt-ghost">
                 <small>SEE MORE</small>
               </div>
             </div>
@@ -159,43 +194,57 @@
       <section id="wip">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 section-header">
-              <h1>Development Projects</h1>
+            <div class="col-xs-12">
+              <div class="section-header">
+                <h1>Development Projects</h1>
+              </div>
             </div>
           </div>
           <div class="row">
-            <div class="content-header-tall">
-              My skillset as a developer grows rapidly every day, and my work only gets more ambitious.
+            <div class="col-xs-12">
+              <div class="content-header-tall">
+                My skillset as a developer grows rapidly every day, and my work only gets more ambitious.
+              </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row section-header">
             <div class="col-xs-12 col-md-6">
-              <div class="col-heading wip-thumb">
+              <div class="wip-thumb">
                 <img src="main/imsilent.jpg" alt="">
               </div>
-              <div class="col-heading section-header wip-desc">
+
+              <div class="title">
                 <h3>I'm Silent Photography</h3>
-                <h5>Full-Stack Development. Django, Python, JavaScript, Bootstrap.</h5>
-                <small>Mary Medovich is a photographer based out of Tampa, FL. She has a gift for rearranging nature's details into perfect picture frames that even the trained eye wouldn't think to notice.</small>
-                <div class="ghost">
-                  <small>VISIT THE WEBSITE</small>
-                </div>
+                <h5><span class="complement">*</span>Full-Stack Development. Django, Python, JavaScript, Bootstrap.</h5>
               </div>
+
+              <div class="desc wip-desc">
+                <p><a href="https://www.instagram.com/imsilentphotography/">Mary Medovich</a> is a photographer based out of Tampa, FL. She has a gift for rearranging nature's details into perfect picture frames that even the trained eye wouldn't think to notice.</p>
+              </div>
+
+              <div class="bt bt-filled">
+                <small>VISIT THE WEBSITE</small>
+              </div>
+
               <div class="section-footer hidden-md"></div>
             </div>
 
-
             <div class="col-xs-12 col-md-6">
-              <div class="col-heading wip-thumb">
+              <div class="wip-thumb">
                 <img src="main/bagels.jpg" alt="">
               </div>
-              <div class="col-heading section-header wip-desc">
+
+              <div class="title">
                 <h3>Bagel Defender</h3>
-                <h5>C#, Unity3D, Adobe CC</h5>
-                <small>A homage to Galaga, but with a unique added experience: Now you know what your server felt like when you were rude to them that one night at Olive Garden. Bagel Defender was a passioned collaboration with Zelly Thomas.</small>
-                <div class="ghost">
-                  <small>PLAY THE GAME</small>
-                </div>
+                <h5><span class="complement">*</span>C#, Unity3D, Adobe CC.</h5>
+              </div>
+
+              <div class="desc wip-desc">
+                <p>A homage to Galaga, but with a unique added experience: Now you know what your server felt like when you were rude to them that one night at Olive Garden. Bagel Defender was a passioned collaboration with <a href="http://mostlyhazel.com">Zelly Thomas.</a></p>
+              </div>
+
+              <div class="bt bt-filled">
+                <small>PLAY THE GAME</small>
               </div>
             </div>
           </div>
@@ -233,9 +282,17 @@
           </div>
         </div>
 
+        <div id="reactTest"></div>
 
       </footer>
-    </div> <!-- #wrapper -->
+    </div>
+
+    <script type="text/babel">
+      ReactDOM.render(
+        <h1>Hello world!</h1>,
+        document.getElementById( 'reactTest' )
+      );
+    </script>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -249,18 +306,5 @@
 
     <!-- Bootstrap 3 JavaScript-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <script>
-    angular.module( 'port', [] )
-      .controller( 'content', function( $scope ) {
-        $scope.header = "Maverick is cool";
-        $scope.ham = "I imagine death so much it feels more like a memory. When’s it gonna get me? In my sleep? Seven feet ahead of me? If I see it comin’, do I run or do I let it be? Is it like a beat without a melody?";
-        $scope.ilton = "See, I never thought I’d live past twenty; where I come from some get half as many. Ask anybody why we livin’ fast and we laugh, reach for a flask. We have to make this moment last, that’s plenty!";
-        $scope.lafayette = 'I dream of life without a monarchy. The unrest in France will lead to ‘onarchy? ‘Onarchy? How you say, how you say, ‘anarchy?’ When I fight, I make the other side panicky with my...';
-        $scope.mulligan = 'Yo, I’m a tailor’s apprentice and I got y’all knuckleheads in loco parentis. I’m joining the rebellion cuz I know it’s my chance to socially advance, instead of sewin’ some pants! I’m gonna take a...';
-        $scope.laurens = 'But we’ll never be truly free until those in bondage have the same rights as you and me You and I. Do or die. Wait till I sally in on a stallion with the first black battalion! Have another...';
-        $scope.content = 'Mollis parturient a sociis a ipsum parturient facilisis semper at a eros etiam a amet sed posuere sit ut luctus semper odio varius consectetur. Mattis ac a nulla eu hendrerit ad gravida faucibus varius urna orci dui suspendisse congue adipiscing etiam duis. Velit ligula ac a blandit magna suspendisse adipiscing blandit a ad ultrices montes adipiscing dictumst suspendisse placerat sociis habitant nunc ligula vestibulum in parturient risus nisl sodales dis vel. A vel sit adipiscing sed consequat nam cubilia fusce orci class tempor facilisis primis at vestibulum. Ullamcorper a eu ut parturient consequat nec mauris dis sed vestibulum potenti faucibus a dis sem a condimentum convallis viverra cum cum adipiscing adipiscing parturient parturient. Dictumst phasellus consectetur rhoncus venenatis condimentum purus ad mus nascetur facilisis class condimentum arcu tellus nunc a sed elit integer scelerisque habitasse.';
-      } ) ;
-    </script>
   </body>
 </html>
