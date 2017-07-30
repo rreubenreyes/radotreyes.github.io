@@ -197,13 +197,13 @@ footer a {
 .bt-ghost-mono {
   color: #FCFCFC;
   border: 2px solid white;
-  -webkit-animation: btGhostOut .2s ease;
-  animation: btGhostOut .2s ease;
+  -webkit-animation: btGhostOutMono .2s ease;
+  animation: btGhostOutMono .2s ease;
 }
 
 .bt-ghost-mono:hover {
-  -webkit-animation: btGhostIn .2s ease forwards;
-  animation: btGhostIn .2s ease forwards;
+  -webkit-animation: btGhostInMono .2s ease forwards;
+  animation: btGhostInMono .2s ease forwards;
   z-index: 999;
 }
 
@@ -231,12 +231,13 @@ footer a {
 
 @@-webkit-keyframes btGhostInMono {
   from {
-    color: inherit;
+    -webkit-color: inherit;
     -webkit-background-color: none;
   }
   to {
     -webkit-color: #FCFCFC;
-    -webkit-background-color: #D81E5B;
+    -webkit-background-color: #2F323A;
+    -webkit-border-color: #2F323A;
   }
 }
 
@@ -247,7 +248,8 @@ footer a {
   }
   to {
     color: #FCFCFC;
-    background-color: #D81E5B;
+    background-color: #2F323A;
+    border-color: #2F323A;
   }
 }
 
@@ -272,6 +274,31 @@ footer a {
     background-color: none;
   }
 }
+
+@-webkit-keyframes btGhostOutMono {
+  from {
+    -webkit-color: inherit;
+    -webkit-background-color: #2F323A;
+    -webkit-border-color: #2F323A;
+  }
+  to {
+    -webkit-color: #FCFCFC;
+    -webkit-background-color: none;
+  }
+}
+
+@keyframes btGhostOutMono {
+  from {
+    color: inherit;
+    background-color: #2F323A;
+    border-color: #2F323A;
+  }
+  to {
+    color: #FCFCFC;
+    background-color: none;
+  }
+}
+
 
 .desc {
   display: block;
