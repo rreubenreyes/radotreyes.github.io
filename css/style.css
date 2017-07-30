@@ -56,9 +56,37 @@ footer {
 }
 
 footer a {
-  color: #FCFCFC;
+  color: #FCFCFC !important;
   text-decoration: none;
   border: none;
+
+  -webkit-animation: smLinkOut .2s ease;
+  animation: smLinkOut .2s ease;
+}
+
+footer a:hover {
+  -webkit-animation: smLinkIn .2s ease forwards;
+  animation: smLinkIn .2s ease forwards;
+}
+
+@-webkit-keyframes smLinkIn {
+  from {  -webkit-color: inherit; }
+  to {    -webkit-color: #336699; }
+}
+
+@keyframes smLinkIn {
+  from {  color: inherit; }
+  to {    color: #336699; }
+}
+
+@-webkit-keyframes smLinkOut {
+  from {  -webkit-color: #336699; }
+  to {    -webkit-color: #FCFCFC; }
+}
+
+@keyframes smLinkOut {
+  from {  color: #336699; }
+  to {    color: #FCFCFC; }
 }
 
 #wrapper {
