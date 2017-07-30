@@ -12,10 +12,6 @@
 
     <!-- Custom -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- React 15.6.1 -->
-    <script src="https://unpkg.com/react@15.6.1/dist/react.min.js"></script>
-    <script src="https://unpkg.com/react-dom@15.6.1/dist/react-dom.min.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -26,12 +22,15 @@
             <div class="hero-content">
               <h1>Reuben Reyes</h1>
               <p>Mechanical engineer, software engineer, web developer</p><br>
-              <div class="ghost">
-                <small>I'M AVAILABLE FOR HIRE</small>
-              </div>
+                <a href="https://dl.dropboxusercontent.com/s/jxre7rpuqzbo86i/resume_reubenReyes_engr_skills_dev.pdf">
+                  <div class="bt bt-ghost-mono">
+                    <small>SEE MY RESUME/CV</small>
+                  </div>
+                </a>
             </div>
           </div>
         </div>
+        <span id="nav-breakpoint"></span>
       </div>
 
       <!-- About Me section -->
@@ -41,6 +40,7 @@
             <div class="col-xs-12 section-header-tall">
               <h1>Expertise</h1>
             </div>
+          </div>
             <div class="row">
               <div class="col-xs-12">
                 <div class="content-header-tall">
@@ -50,45 +50,84 @@
             </div>
 
             <div class="row">
-              <div class="col-xs-12 col-md-4 me-cell">
-                <div class="bubble content-header">
-                  <div class="bubble-content mechatronics">
-                    <i class="fa fa-cog" aria-hidden="true"></i>
-                  </div>
-                  <div class="bubble-text">
-                    <strong>Mechatronics and Controls</strong>
+              <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12">
+                  <div class="bubble">
+                    <div class="bubble-content">
+                      <div class="bubble-icon">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="desc">
-                  <p>Building a robot involves wiring motors to circuit boards, laser-cutting acrylic parts, and writing programs that tell the robot what to do. Four years of interdisciplinary projects has made me multi-faceted and versatile as an engineer.</p>
+
+                <div class="col-xs-12">
+                  <div class="content-header">
+                    <div class="bubble-text">
+                      <h3>Mechatronics and Controls</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12">
+                  <div class="desc">
+                    <p>Building a robot involves wiring motors to circuit boards, laser-cutting acrylic parts, and writing programs that tell the robot what to do. Four years of interdisciplinary projects has made me multi-faceted and versatile as an engineer.</p>
+                  </div>
                 </div>
               </div>
-              <div class="col-xs-12 col-md-4 me-cell">
-                <div class="bubble content-header">
-                  <div class="bubble-content controls">
-                    <i class="fa fa-magic" aria-hidden="true"></i>
-                  </div>
-                  <div class="bubble-text">
-                    <strong>UX/UI Design</strong>
+
+              <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12">
+                  <div class="bubble">
+                    <div class="bubble-content">
+                      <div class="bubble-icon">
+                        <i class="fa fa-magic" aria-hidden="true"></i>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="desc">
-                  <p>I design interfaces with focus on content structure, minimalism, and immense attention-to-detail. Interacting with a website should be natural; my style is clean, consistent, and modern.</p>
+
+                <div class="col-xs-12">
+                  <div class="content-header">
+                    <div class="bubble-text">
+                      <h3>UX/UI Design</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12">
+                  <div class="desc">
+                    <p>I design interfaces with focus on content structure, minimalism, and immense attention-to-detail. Interacting with a website should be natural; my style is clean, consistent, and modern.</p>
+                  </div>
                 </div>
               </div>
-              <div class="col-xs-12 col-md-4 me-cell">
-                <div class="bubble content-header">
-                  <div class="bubble-content dev">
-                    <i class="fa fa-code" aria-hidden="true"></i>
-                  </div>
-                  <div class="bubble-text">
-                    <strong>Full-Stack Development</strong>
+
+              <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12">
+                  <div class="bubble">
+                    <div class="bubble-content">
+                      <div class="bubble-icon">
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="desc">
-                  <p>I'm comfortable on both sides of a development project. I've mapped out website back-ends in Django while coding the front-end CSS and logic myself, and programmed video games in C# while drafting my own sprites in Illustrator.</p>
+
+                <div class="col-xs-12">
+                  <div class="content-header">
+                    <div class="bubble-text">
+                      <h3>Full-Stack Development</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12">
+                  <div class="desc">
+                    <p>I'm comfortable on both sides of a development project. I've mapped out website back-ends in Django while coding the front-end CSS and logic myself, and programmed video games in C# while drafting my own sprites in Illustrator.</p>
+                  </div>
                 </div>
               </div>
+            </div>
             </div>
           </div>
           <div class="section-footer"></div>
@@ -113,11 +152,10 @@
             </div>
           </div>
           <div class="row section-header">
-            <div class="">
-
-            </div>
-            <div class="col-xs-12 col-md-4 project-thumb">
-              <img src="main/seniorproject2.jpg" alt="">
+            <div class="col-sm-12 col-md-4">
+              <div class="project-thumb">
+                <img src="main/seniorproject2.jpg" alt="">
+              </div>
             </div>
             <div class="col-xs-12 col-md-8">
               <div class="title">
@@ -243,7 +281,7 @@
                 <p>A homage to Galaga, but with a unique added experience: Now you know what your server felt like when you were rude to them that one night at Olive Garden. Bagel Defender was a passioned collaboration with <a href="http://mostlyhazel.com">Zelly Thomas.</a></p>
               </div>
 
-              <div class="bt bt-filled">
+              <div id="dynamicButton" class="bt bt-filled">
                 <small>PLAY THE GAME</small>
               </div>
             </div>
@@ -256,53 +294,40 @@
           <div class="section-header">
             <p>Website © Reuben Reyes, 2017.</p>
           </div>
-          <div class="row">
-            <div class="bubble">
-              <div class="col-xs-3">
-                <a href="#"><div class="bubble-content">
-                  <i class="fa fa-github" aria-hidden="true"></i>
-                </div></a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#"><div class="bubble-content">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </div></a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#"><div class="bubble-content">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </div></a>
-              </div>
-              <div class="col-xs-3">
-                <a href="#"><div class="bubble-content">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </div></a>
-              </div>
+          <div class="sm">
+            <div class="row">
+                <div class="col-xs-12">
+                  <a href="#">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                  </a>&ensp;|&ensp;
+                  <a href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>&ensp;|&ensp;
+                  <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>&ensp;|&ensp;
+                  <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                </div>
             </div>
           </div>
         </div>
-
-        <div id="reactTest"></div>
-
       </footer>
     </div>
-
-    <script type="text/babel">
-      ReactDOM.render(
-        <h1>Hello world!</h1>,
-        document.getElementById( 'reactTest' )
-      );
+    <script src="js/isInViewport.js"></script>
+    <script>
+      // window.addEventListener( 'scroll', isInViewport( document.querySelector( '.fullscreen-hero' ) ) );
+      window.addEventListener( 'scroll', () => {
+        let hero = document.querySelector( '#nav-breakpoint' );
+        console.log( isInViewport( hero ) );
+      } );
     </script>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <!-- Angular 1.6.1 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-touch.min.js"></script>
 
     <!-- Bootstrap 3 JavaScript-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

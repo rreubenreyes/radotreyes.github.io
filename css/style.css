@@ -17,7 +17,6 @@ a:hover {
   border: none;
 }
 
-
 h1, h3 {
   font-weight: bolder;
   color: #2F323A;
@@ -29,6 +28,10 @@ h5 {
 
 .hero-content h1 {
   color: inherit;
+}
+
+#nav-breakpoint {
+  content: '';
 }
 
 section {
@@ -44,24 +47,16 @@ section h1 {
 footer {
   padding: 80px 0 50px;
   background-color: #2F323A;
-  color: #fff;
+  color: #FCFCFC;
   text-align: center;
 }
 
-footer .bubble-content {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  background-color: #505050;
-  color: #909090 !important;
-  border-radius: 50%;
-  font-size: 0.8rem;
-  color: white;
-  width: 30px;
-  height: 30px;
+.sm {
+  color: #336699;
 }
 
 footer a {
+  color: #FCFCFC;
   text-decoration: none;
   border: none;
 }
@@ -69,7 +64,9 @@ footer a {
 #wrapper {
   display: block;
   min-height: 100%;
+  max-height: 100%;
   min-width: 100%;
+  max-width: 100%;
   color: white;
 }
 
@@ -79,7 +76,6 @@ footer a {
     min-height: 350px;
   position: relative;
   text-align: center;
-  background-color: #FF5964;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -90,7 +86,7 @@ footer a {
 }
 
 .hero-image {
-  background-image: url( rocks.JPG );
+  background-image: url( 'smm.jpg' );
     height: inherit;
   background-attachment: fixed;
   background-position: center;
@@ -126,19 +122,164 @@ footer a {
   border: 2px solid #D81E5B;
   background-color: #D81E5B;
   color: #FCFCFC;
+
+  -webkit-animation: btFilledOut .2s ease;
+  animation: btFilledOut .2s ease;
+}
+
+.bt-filled:hover {
+  -webkit-animation: btFilledIn .2s ease forwards;
+  animation: btFilledIn .2s ease forwards;
+  z-index: 999;
+}
+
+@-webkit-keyframes btFilledIn {
+  from {
+    -webkit-color: inherit;
+    -webkit-background-color: inherit;
+  }
+  to {
+    -webkit-color: #FCFCFC;
+    -webkit-background-color: #2F323A;
+    -webkit-border-color: #2F323A;
+  }
+}
+
+@keyframes btFilledIn {
+  from {
+    color: inherit;
+    background-color: inherit;
+  }
+  to {
+    color: #FCFCFC;
+    background-color: #2F323A;
+    border-color: #2F323A;
+  }
+}
+
+@-webkit-keyframes btFilledOut {
+  from {
+    -webkit-color: inherit;
+    -webkit-background-color: inherit;
+  }
+  to {
+    -webkit-color: #FCFCFC;
+    -webkit-background-color: #D81E58;
+    -webkit-border-color: #D81E58;
+  }
+}
+
+@keyframes btFilledOut {
+  from {
+    color: inherit;
+    background-color: inherit;
+  }
+  to {
+    color: #FCFCFC;
+    background-color: #D81E58;
+    border-color: #D81E58;
+  }
 }
 
 .bt-ghost {
   border: 2px solid #D81E5B;
   color: #2F323A;
+  -webkit-animation: btGhostOut .2s ease;
+  animation: btGhostOut .2s ease;
+}
+
+.bt-ghost:hover {
+  -webkit-animation: btGhostIn .2s ease forwards;
+  animation: btGhostIn .2s ease forwards;
+  z-index: 999;
 }
 
 .bt-ghost-mono {
+  color: #FCFCFC;
   border: 2px solid white;
+  -webkit-animation: btGhostOut .2s ease;
+  animation: btGhostOut .2s ease;
+}
+
+.bt-ghost-mono:hover {
+  -webkit-animation: btGhostIn .2s ease forwards;
+  animation: btGhostIn .2s ease forwards;
+  z-index: 999;
+}
+
+@-webkit-keyframes btGhostIn {
+  from {
+    -webkit-color: inherit;
+    -webkit-background-color: none;
+  }
+  to {
+    -webkit-color: #FCFCFC;
+    -webkit-background-color: #D81E5B;
+  }
+}
+
+@keyframes btGhostIn {
+  from {
+    color: inherit;
+    background-color: none;
+  }
+  to {
+    color: #FCFCFC;
+    background-color: #D81E5B;
+  }
+}
+
+@@-webkit-keyframes btGhostInMono {
+  from {
+    color: inherit;
+    -webkit-background-color: none;
+  }
+  to {
+    -webkit-color: #FCFCFC;
+    -webkit-background-color: #D81E5B;
+  }
+}
+
+@keyframes btGhostInMono {
+  from {
+    color: inherit;
+    background-color: none;
+  }
+  to {
+    color: #FCFCFC;
+    background-color: #D81E5B;
+  }
+}
+
+@-webkit-keyframes btGhostOut {
+  from {
+    -webkit-color: #FCFCFC;
+    -webkit-background-color: #D81E5B;
+  }
+  to {
+    -webkit-color: inherit;
+    -webkit-background-color: none;
+  }
+}
+
+@keyframes btGhostOut {
+  from {
+    color: #FCFCFC;
+    background-color: #D81E5B;
+  }
+  to {
+    color: inherit;
+    background-color: none;
+  }
+}
+
+.desc {
+  display: block;
 }
 
 .desc p {
-  padding: .75em 0 0;
+  padding: .75em .5em;
+  margin: 0em 1.5em 0;
   font-size: 1.6rem;
 }
 
@@ -202,17 +343,18 @@ footer a {
 }
 
 .content-header {
-  padding: 0 0 0.5em;
+  padding: 0 0.5em 0.5em;
 }
 
 .content-header-tall {
-  padding: 0 0 1.5em;
+  padding: 0 0.5em 1.5em;
 }
 
 .project-thumb img {
   display: block;
   margin: 0 auto;
   width: 350px;
+    max-width: 100%;
   height: auto;
   border-radius: 3%;
 }
@@ -221,35 +363,71 @@ footer a {
   display: block;
   margin: 0 auto;
   width: 500px;
+    max-width: 100%;
   height: auto;
   border-radius: 3%;
 }
 
-.bubble {
-  margin: 0 auto;
-  display: table;
+
+@media( max-width: 992px ) {
+  .bubble {
+    margin: 0 auto;
+    padding: 2.5vh 25vw 2.5vh;
+  }
+}
+
+@media( min-width: 993px ) {
+  .bubble {
+    margin: 0 auto;
+    padding: 2.5vh 5vw 2.5vh;
+  }
 }
 
 .bubble-content {
-  display: table-cell;
-  vertical-align: middle;
+  position: relative;
+  display: block;
+  margin: 0;
   text-align: center;
   background-color: #D81E5B;
-  padding: .2em 0 0;
   color: #FCFCFC;
   border-radius: 50%;
+  padding-top: 100%;
   font-size: 2.5rem;
-  width: 85px;
-  height: 85px;
+  max-width: 100%;
+  height: auto;
 }
 
 .bubble-text {
   color: #2F323A;
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
   text-align: center;
-  padding: 0 1em;
   font-size: 3rem;
+}
+
+@media( max-width: 992px ) {
+  .bubble-icon {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 10vw;
+
+    -webkit-transform: translate( -50%, -50% );
+    transform: translate( -50%, -50% );
+  }
+}
+
+@media( min-width: 993px ) {
+  .bubble-icon {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 4vw;
+
+    -webkit-transform: translate( -50%, -50% );
+    transform: translate( -50%, -50% );
+  }
 }
 
 .complement {
