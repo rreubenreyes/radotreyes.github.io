@@ -588,8 +588,8 @@ footer a:hover {
 
     -webkit-transform: translate( -50%, -50% );
     transform: translate( -50%, -50% );
-    left: 88vw;
-    top: 84vh;
+    left: 83vw;
+    top: 80vh;
 
     animation: smButtonIn .25s ease-in;
     -webkit-animation: smButtonIn .25s ease-in;
@@ -597,22 +597,22 @@ footer a:hover {
 
   @-webkit-keyframes smButtonIn {
     from {
-      -webkit-top: 89vh;
+      -webkit-top: 85vh;
       -webkit-opacity: 0;
     }
     to {
-      -webkit-top: 84vh;
+      -webkit-top: 80vh;
       -webkit-opacity: 1;
     }
   }
 
   @keyframes smButtonIn {
     from {
-      top: 89vh;
+      top: 85vh;
       opacity: 0;
     }
     to {
-      top: 84vh;
+      top: 80vh;
       opacity: 1;
     }
   }
