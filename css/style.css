@@ -575,7 +575,7 @@ footer a:hover {
     -webkit-transform: translate( -50%, -50% );
     transform: translate( -50%, -50% );
     left: 88vw;
-    top: 95vh;
+    top: 90vh;
   }
 
   .menu {
@@ -588,7 +588,7 @@ footer a:hover {
 
     -webkit-transform: translate( -50%, -50% );
     transform: translate( -50%, -50% );
-    left: 83vw;
+    left: 88vw;
     top: 80vh;
 
     animation: smButtonIn .25s ease-in;
