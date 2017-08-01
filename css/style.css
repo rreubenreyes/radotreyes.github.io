@@ -6,10 +6,15 @@ body {
   font-size: 2rem;
 }
 
-a, a:visited, a:active {
+a a:active {
   text-decoration: none;
   color: #336699;
   border-bottom: 1px #336699 dotted;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #336699;
 }
 
 a:hover {
@@ -17,7 +22,7 @@ a:hover {
   border: none;
 }
 
-h1, h3 {
+h1, h2, h3 {
   font-weight: bolder;
   color: #2F323A;
 }
@@ -44,15 +49,26 @@ section h1 {
   font-size: 5rem;
 }
 
-footer {
+footer, .contact-modal {
   padding: 80px 0 50px;
   background-color: #2F323A;
   color: #FCFCFC;
-  text-align: center;
 }
 
-.sm {
+.contact-modal h2 {
+  color: #FCFCFC;
+}
+
+footer .sm {
   color: #336699;
+}
+
+footer .credits {
+  color: #FCFCFC;
+}
+
+footer .credits, footer .sm {
+  text-align: center;
 }
 
 footer a {
@@ -340,7 +356,6 @@ footer a:hover {
   }
 }
 
-
 .desc {
   display: block;
 }
@@ -361,6 +376,33 @@ footer a:hover {
 #me, #wip {
   text-align: center;
   background-color: #FCFCFC;
+}
+
+#aboutme {
+  background-color: #E4E5E8;
+}
+
+#pictureofme {
+  position: static;
+  display: block;
+  width: 300px;
+    max-width: 100%;
+  height: 300px;
+    max-height: 100%;
+}
+
+#pictureofme img {
+  display: block;
+  position: absolute;
+  width: 300px;
+    max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  padding: 1em 0 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate( -50%, -50% );
+  transform: translate( -50%, -50% );
 }
 
 #projects:before {
@@ -508,4 +550,42 @@ footer a:hover {
   margin: 40px 0 20px;
   border-bottom: 1px solid #2F323A;
   content: '';
+}
+
+#contact {
+  padding: 0 2em;
+}
+
+.modal-body {
+  padding: 0 2em;
+}
+
+@media( max-width: 992px ) {
+  #nav {
+    display: block;
+    background-color: #FFF;
+    position: fixed;
+    padding: 1em 2em;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-align: center;
+
+    left: 86vw;
+    top: 94vh;
+  }
+}
+
+@media( min-width: 993px ) {
+  #nav {
+    display: block;
+    background-color: #FFF;
+    position: fixed;
+    padding: 1em 2em;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-align: center;
+
+    left: 92vw;
+    top: 90vh;
+  }
 }

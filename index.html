@@ -27,6 +27,11 @@
                     <small>SEE MY RESUME/CV</small>
                   </div>
                 </a>
+                <a href="#contactme">
+                  <div class="bt bt-ghost-mono">
+                    <small>CONTACT ME</small>
+                  </div>
+                </a>
             </div>
           </div>
         </div>
@@ -163,7 +168,7 @@
             <div class="col-xs-12 col-md-8">
               <div class="title">
                 <h3><strong>Pathway to Engineering</strong></h3>
-                <h5><span class="complement">*</span>HEV/EV theory, solid modeling, metalworking, welding, scripting (Visual Basic).</h5>
+                <h5><span class="complement">*</span>SJSU ME195: Senior Project. HEV/EV theory, solid modeling, metalworking, welding, scripting (Visual Basic).</h5>
               </div>
 
               <div class="desc project-desc">
@@ -190,7 +195,7 @@
             <div class="col-xs-12 col-md-8 col-md-pull-4">
               <div class="title">
                 <h3><strong>Automatic Bicycle Shifter</strong></h3>
-                <h5><span class="complement">*</span>Mechatronics, electronic prototyping, solid modeling, scripting (Arduino).</h5>
+                <h5><span class="complement">*</span>SJSU ME106: Intro to Mechatronics. Mechatronics, electronic prototyping, solid modeling, scripting (Arduino).</h5>
               </div>
 
               <div class="desc project-desc">
@@ -219,7 +224,7 @@
             <div class="col-xs-12 col-md-8">
               <div class="title">
                 <h3><strong>"Segway" Robot Stabilization</strong></h3>
-                <h5><span class="complement">*</span>State-space modeling, digital controls, MATLAB, Simulink.</h5>
+                <h5><span class="complement">*</span>SJSU ME190: Mechatronic Systems Design. State-space modeling, digital controls, MATLAB, Simulink.</h5>
               </div>
 
               <div class="desc project-desc">
@@ -305,13 +310,57 @@
         </div>
       </section>
 
+      <section id="aboutme">
+        <div class="container">
+
+          <div class="separator"></div>
+
+          <div class="section-header"></div>
+          <div class="row">
+            <!-- <div class="col-xs-12 col-md-5">
+               -->
+            <div class="col-xs-12 col-md-3">
+              <div class="section-header"></div>
+              <div id="pictureofme">
+                <img src="css/me.jpg" alt="me">
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-9">
+              <div class="bio desc">
+                <h2>&emsp;Who Am I?</h2>
+                <p>Hi, I'm Reuben. First things first, I earned my B.S. Mechanical Engineering from San Jose State University in May 2017. I've always had a knack for programming, and after  years of writing code to spin motors and process data from quadrature encoders, I discovered that I was passionate about it.<br><br>
+                While still studying at SJSU, I decided to learn more about programming on my own. I worked my way through YouTube tutorials, 500-page books, auditing Comp-Sci classes, and bugging developer friends for advice to arrive at the skillset I have today. Currently I'm building web applications as a freelance full-stack developer, using <span style="color:#2F323A">HTML, CSS, JavaScript (Vanilla, React, jQuery), Python,</span> and <span style="color:#2F323A">Django.</span> I've got projects in <span style="color:#2F323A">Node, Express</span>, and <span style="color:#2F323A">Mongo</span> in the works. As an engineer, I bring analytical problem-solving and strong teamwork skills to the table.<br><br>
+                Outside of being a code monkey, I spend most of my time doing Olympic weightlifting, pretending to be a good cook, and petting my dog/looking at pictures of dogs/pretending I'm a dog to my girlfriend.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-header"></div>
+          <div class="separator"></div>
+
+          <div class="row" id="contactme">
+            <div class="col-xs-12">
+              <h3 class="text-center">Have a question for me?</h3>
+              <a href="#contact-form" data-toggle="modal">
+                <div class="bt bt-filled">
+                  <small>SEND ME AN EMAIL</small>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer>
         <div class="container">
-          <div class="section-header">
-            <p>Website © Reuben Reyes, 2017.</p>
-          </div>
           <div class="sm">
             <div class="row">
+              <div class="col-xs-12">
+                <div class="credits">
+                  <p><small>Built from scratch by me. © 2017.</small></p>
+                </div>
+                <div class="section-header"></div>
+              </div>
                 <div class="col-xs-12">
                   <a href="http://github.com/radotreyes">
                     <i class="fa fa-github" aria-hidden="true"></i>
@@ -330,13 +379,36 @@
           </div>
         </div>
       </footer>
+
+      <div id="contact-form" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content contact-modal">
+            <h2 class="text-center">Glad you decided to reach out!</h2>
+            <div class="content-header-tall"></div>
+            <div class="modal-body">
+              <form action="http://formspree.io/reuben.a.reyes@gmail.com" method="POST">
+                <div class="form-group text-left">
+                  <label for="sender"><small>Your email:</small></label>
+                  <input id="sender" class="form-control"type="email" name="_replyto" placeholder="tcook@apple.com" required>
+                </div>
+
+                <div class="form-group text-left">
+                  <label for="message"><small>Message:</small></label>
+                  <textarea id="message" class="form-control"  name="body" placeholder="I love your work" required></textarea>
+                </div>
+
+                <input class="btn btn-default" type="submit" value="Send">
+              </form>
+              <br>
+              <small><p class="text-center">If you'd prefer to email me directly: reuben.a.reyes@gmail.com</p></small>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
     </div>
-    <script src="js/isInViewport.js"></script>
-    <script>
-      window.addEventListener( 'scroll', () => {
-        let hero = document.querySelector( '#nav-breakpoint' );
-      } );
-    </script>
+
+    <div id="nav"></div>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -345,5 +417,46 @@
 
     <!-- Bootstrap 3 JavaScript-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- React 15 -->
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/babel-min.js"></script>
+
+    <!-- <script src="js/isInViewport.js"></script> -->
+    <!-- <script type="text/babel">
+      // window.addEventListener( 'scroll', () => {
+      //   let hero = document.querySelector( '#nav-breakpoint' );
+      // } );
+
+      class Hamburger extends React.Component {
+        constructor( props ) {
+          super( props );
+          this.state = { isToggleOn: true };
+
+          // This binding is necessary to make `this` work in the callback
+          this.handleClick = this.handleClick.bind( this );
+        }
+
+        handleClick() {
+          this.setState( prevState => ( {
+            isToggleOn: !prevState.isToggleOn
+          } ) );
+        }
+
+        render() {
+          return (
+            <div onClick={ this.handleClick }>
+              { this.state.isToggleOn ? <i className="fa fa-bars" aria-hidden="true"></i> : 'OFF' }
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <Hamburger />,
+        document.getElementById( 'nav' )
+      );
+    </script> -->
   </body>
 </html>
