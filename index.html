@@ -16,7 +16,7 @@
   <body>
     <div id="wrapper">
       <!-- Hero section -->
-      <div class="fullscreen-hero">
+      <div id="hero" class="fullscreen-hero">
         <div class="hero-back">
           <div class="hero-container">
             <div class="hero-content">
@@ -423,36 +423,83 @@
     <script src="js/react-dom.min.js"></script>
     <script src="js/babel-min.js"></script>
 
-    <!-- <script src="js/isInViewport.js"></script> -->
-    <!-- <script type="text/babel">
-      class Hamburger extends React.Component {
+    <script src="js/smoothanchor.js"></script>
+    <script type="text/babel">
+      class Nav extends React.Component {
         constructor( props ) {
           super( props );
-          this.state = { isToggleOn: true };
+          this.state = { toggle: true };
 
-          // This binding is necessary to make `this` work in the callback
+          // icon display states
+          this.icon = {
+            open: "fa fa-angle-down",
+            collapsed: "fa fa-angle-up"
+          };
+
+          // bind listeners
           this.handleClick = this.handleClick.bind( this );
         }
 
+        // click event listener
         handleClick() {
           this.setState( prevState => ( {
-            isToggleOn: !prevState.isToggleOn
+            toggle: !prevState.toggle
           } ) );
         }
 
         render() {
+          const navOpened = this.state.toggle;
+
+          let menu = null;
+          let hamburger = null;
+
+          if( navOpened ) {
+            menu = <Menu />;
+            hamburger = <Hamburger icon={ this.icon.open }/>;
+          }
+          else {
+            hamburger = <Hamburger icon={ this.icon.collapsed }/>;
+          }
+
           return (
-            <div onClick={ this.handleClick }>
-              { this.state.isToggleOn ? <i className="fa fa-bars" aria-hidden="true"></i> : 'OFF' }
+            <div>
+              { menu }
+
+              <div className="navButton" onClick={ this.handleClick }>
+                { hamburger }
+              </div>
             </div>
           );
         }
       }
 
+      function Menu( props ) {
+        return(
+          <div className = "menu">
+            <a href="#hero"><div className="cat">
+            <small><em>(back to top)</em></small>
+            </div></a>
+            <a href="#me"><div className="cat">Expertise</div></a>
+            <a href="#projects"><div className="cat">Engineering</div></a>
+            <a href="#wip"><div className="cat">Development</div></a>
+            <a href="#aboutme"><div className="cat">About</div></a>
+          </div>
+        );
+      }
+
+      function Hamburger( props ) {
+        return(
+          <i
+            className = { props.icon }
+            aria-hidden = "true">
+          </i>
+        );
+      }
+
       ReactDOM.render(
-        <Hamburger />,
+        <Nav />,
         document.getElementById( 'nav' )
       );
-    </script> -->
+    </script>
   </body>
 </html>

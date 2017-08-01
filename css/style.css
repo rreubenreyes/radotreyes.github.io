@@ -489,7 +489,9 @@ footer a:hover {
 @media( min-width: 993px ) {
   .bubble {
     margin: 0 auto;
-    padding: 2.5vh 5vw 2.5vh;
+    padding: 2.5vh 5vw 2.5vh;<div className="cat">Engineering</div>
+            <div className="cat">Development</div>
+            <div className="cat">About</div>
   }
 }
 
@@ -561,31 +563,138 @@ footer a:hover {
 }
 
 @media( max-width: 992px ) {
-  #nav {
+  .navButton {
     display: block;
     background-color: #FFF;
     position: fixed;
-    padding: 1em 2em;
-    border: 1px solid black;
+    padding: 1em 1.45em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 50px;
     text-align: center;
 
-    left: 86vw;
-    top: 94vh;
+    -webkit-transform: translate( -50%, -50% );
+    transform: translate( -50%, -50% );
+    left: 88vw;
+    top: 95vh;
+  }
+
+  .menu {
+    display: block;
+    background-color: #FFF;
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    text-align: center;
+
+    -webkit-transform: translate( -50%, -50% );
+    transform: translate( -50%, -50% );
+    left: 88vw;
+    top: 84vh;
+
+    animation: smButtonIn .25s ease-in;
+    -webkit-animation: smButtonIn .25s ease-in;
+  }
+
+  @-webkit-keyframes smButtonIn {
+    from {
+      -webkit-top: 89vh;
+      -webkit-opacity: 0;
+    }
+    to {
+      -webkit-top: 84vh;
+      -webkit-opacity: 1;
+    }
+  }
+
+  @keyframes smButtonIn {
+    from {
+      top: 89vh;
+      opacity: 0;
+    }
+    to {
+      top: 84vh;
+      opacity: 1;
+    }
   }
 }
 
 @media( min-width: 993px ) {
-  #nav {
+  .navButton {
     display: block;
     background-color: #FFF;
     position: fixed;
-    padding: 1em 2em;
-    border: 1px solid black;
+    padding: 1em 1.45em;
     border-radius: 50px;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+    -webkit-transform: translate( -50%, -50% );
+    transform: translate( -50%, -50% );
     left: 92vw;
-    top: 90vh;
+    top: 92vh;
   }
+
+  .navButton:hover {
+    display: block;
+    background-color: #D4E4E4;
+    position: fixed;
+    padding: 1em 1.45em;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .menu {
+    display: block;
+    background-color: #FFF;
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    text-align: center;
+
+    -webkit-transform: translate( -50%, -50% );
+    transform: translate( -50%, -50% );
+    left: 92vw;
+    top: 77vh;
+    z-index: 1;
+
+    animation: smButtonIn .3s ease-in;
+    -webkit-animation: smButtonIn .3s ease-in;
+  }
+
+  @-webkit-keyframes smButtonIn {
+    from {
+      -webkit-top: 81vh;
+      -webkit-opacity: 0;
+    }
+    to {
+      -webkit-top: 77vh;
+      -webkit-opacity: 1;
+    }
+  }
+
+  @keyframes smButtonIn {
+    from {
+      top: 81vh;
+      opacity: 0;
+    }
+    to {
+      top: 77vh;
+      opacity: 1;
+    }
+  }
+}
+
+.cat {
+  font-size: 1.75rem;
+  padding: .5em 1.5em;
+}
+
+.cat:hover {
+  background-color: rgba(212, 212, 212, 0.5);
+}
+
+.menu a {
+  color: #2F323A;
+  text-decoration: none;
 }
