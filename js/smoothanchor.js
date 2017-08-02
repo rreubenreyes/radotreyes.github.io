@@ -6,5 +6,4 @@ $( document ).on( 'click', 'a', function( event ) {
           scrollTop: $( $.attr( this, 'href' ) ).offset().top
       }, 500, 'easeInCubic' );
     }
-
 });
