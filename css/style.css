@@ -407,7 +407,7 @@ footer a:hover {
 
 #projects:before {
   position: absolute;
-  background-color: inherit;
+  background-color: #E4E5E8;
   border-bottom: 50px solid #E4E5E8;
   width: 100%;
   content: '';
@@ -424,7 +424,7 @@ footer a:hover {
 
 #wip:before {
   position: absolute;
-  background-color: inherit;
+  background-color: #FCFCFC;
   border-bottom: 50px solid #FCFCFC;
   width: 100%;
   content: '';
