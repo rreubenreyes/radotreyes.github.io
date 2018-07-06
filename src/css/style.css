@@ -32,13 +32,9 @@ body {
 .loading {
   background-color: rgba( 0, 0, 0, .05 );
   color: #c3c3c3;
-  font-size: 20pt;  
+  font-size: 12pt;  
   padding: 1em 0;
-  margin: 0 10vw;
-  border-radius: 5px;
-  box-shadow: 4px 4px 40px 0px rgba( 0, 0, 0, .1 );
-  -webkit-box-shadow: 4px 4px 40px 0px rgba( 0, 0, 0, .1 );
-  -moz-box-shadow: 4px 4px 40px 0px rgba( 0, 0, 0, .1 );
+  margin: 0 auto;
 }
 
 .loading a, .loading a:visited {
