@@ -37,6 +37,10 @@
   margin: 0 auto;
 }
 
-[class^="loading__icon--], [class^="loading__icon--]:visited {
+a[class^="loading__icon--] {
+  color: #66bbff;
+}
+
+a[class^="loading__icon--]:visited {
   color: #66bbff;
 }
