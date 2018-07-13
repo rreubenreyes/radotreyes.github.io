@@ -1,5 +1,4 @@
-@import url( 'https://fonts.googleapis.com/css?Quicksand|Inconsolata' );
-
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Quicksand');
 html {
   font-size: 12px;
   font-family: 'Inconsolata', monospace;
