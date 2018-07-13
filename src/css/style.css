@@ -39,6 +39,6 @@ body {
   margin: 0 auto;
 }
 
-a[class^="loading__icon--], a[class^="loading__icon--]:visited {
+[class^="loading__icon--], a[class^="loading__icon--]:visited {
   color: #66bbff;
 }
