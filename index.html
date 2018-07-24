@@ -10,16 +10,33 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   </head>
   <body>
-      <div id="wrapper">
-        <div id="splash">
-          <img id="logo" src="src/static/splash-dark.svg">
-          <p class="loading">
-            Site in development.&nbsp; Check me out on social media:&nbsp;
-            <a class="loading__icon--twitter" href="https://twitter.com/radotreyes"><i class="fab fa-twitter"></i></a>&nbsp;
+    <div id="wrapper">
+      <img id="logo" src="src/static/splash-dark.svg">
+      <div id="social"><span class="social__links">Site in development. Find me on social media: <a class="loading__icon--twitter" href="https://twitter.com/radotreyes"><i class="fab fa-twitter"></i></a>&nbsp;
             <a class="loading__icon--github" href="https://github.com/radotreyes"><i class="fab fa-github"></i></a>&nbsp;
-            <a class="loading__icon--linkedin" href="https://linkedin.com/in/reubenreyes"><i class="fab fa-linkedin"></i></a>
-          </p>
+            <a class="loading__icon--linkedin" href="https://linkedin.com/in/reubenreyes"><i class="fab fa-linkedin"></i></a></span></div>
+      <div id="projects">
+        <div class="projects__project projects__project--1">
+          <span class="projects__project--title">Try Coding, It's Fun</span>
+          <img class="projects__project--img" src="./src/static/tcif.gif"/>
+          <span class="projects__project--desc">Web platform encouraging self-taught developers to love what they're coding. <a href="trycodingitsfun.com">See more</a></span>
+        </div>
+        <div class="projects__project">
+          <span class="projects__project--title">I'm Silent Photography</span>
+          <img class="projects__project--img" src="./src/static/silent.png"/>
+          <span class="projects__project--desc">Freelance photographer portfolio site and CMS built on top of Django. <a href="imsilentphotography.net">See more</a></span>
+        </div>
+        <div class="projects__project">
+          <span class="projects__project--title">YDKJS Exercises</span>
+          <img class="projects__project--img" src="./src/static/ydkjs.gif"/>
+          <span class="projects__project--desc">Open-source project dedicated to teaching JavaScript fundamentals. GitHub Collaborator. <a href="ydkjs-exercises.com">See more</a></span>
+        </div>
+        <div class="projects__project">
+          <span class="projects__project--title">PBX Data Parser</span>
+          <img class="projects__project--img" src="./src/static/parser.jpg"/>
+          <span class="projects__project--desc">PBX outfile parser which writes erratically delimited data to spreadsheet software. <a href="https://github.com/radotreyes/pbx_parse">See more</a></span>
         </div>
       </div>
+    </div>
   </body>
 </html>

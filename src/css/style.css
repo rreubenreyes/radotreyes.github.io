@@ -1,46 +1,86 @@
- @import url('https://fonts.googleapis.com/css?family=Quicksand');
+ @import url('https://fonts.googleapis.com/css?family=Barlow|Quicksand');
 html {
   font-size: 18px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Barlow', sans-serif;
   margin: 0;
   padding: 0;
 }
 
 body {
   margin: 0 !important;
+  overflow-x: hidden;
   padding: 0 !important;
+}
+
+a {
+  color: powderblue;
+  text-decoration: none;
 }
 
 #wrapper {
   display: flex;
   position: relative;
   background-color: #222;
-  height: 100vh;
-    min-height: 100vh;
   width: 100vw;
     min-width: 100vw;
+  min-height: 100vh;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-#splash  {
-  position: relative;
-  margin: 0 auto;
-  color: #c3c3c3;
+#logo {
+  display: block;
+  margin: 5vw 0 0;	
+  width: 75%;
+  max-height: 20vh;
+}
+
+#social {
+  color: #ccc;
+  flex-basis: 100%;
+  font-family: 'Barlow', sans-serif;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
-#splash img {
-  width: 50vw;
-  padding-top: 2.5rem;
+#projects {
+  display: flex;
+  margin: 0 2vw;
+  flex-basis: calc(100% - 20vw);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.loading {
-  color: #c3c3c3;
-  font-size: 1rem;  
-  padding: 1em 0;
-  margin: 0 auto;
+.projects__project {
+  position: relative;
+  flex-basis: calc(400px + 5vw);
+  min-height: calc(200px + 5vw);
+  margin: 0 1.5rem 3rem;
+  overflow: hidden;
 }
 
-a[class^="loading__icon--"], a[class^="loading__icon--"]:visited {
-  color: #66bbff;
+.projects__project--img {
+  display: block;
+  width: calc(100% - 2rem);
+  height: calc(175px + 5vw);
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .5);
+  margin: .5rem 0;
+  padding: 1rem;
 }
+
+.projects__project--title {
+  color: #eee;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.projects__project--desc {
+  color: #ccc;
+  font-family: 'Barlow', sans-serif;
+}
+
+
