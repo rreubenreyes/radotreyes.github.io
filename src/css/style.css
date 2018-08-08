@@ -38,7 +38,7 @@ a {
 
 #social {
   color: #ccc;
-  flex-basis: calc(100% - 20vw);
+  flex-basis: calc(100% - 30vw);
   font-family: 'Barlow', sans-serif;
   margin-bottom: 2rem;
   text-align: center;
@@ -62,13 +62,13 @@ a {
 
 .projects__project--img {
   display: block;
-  width: calc(100% - 2rem);
-  height: calc(175px + 5vw);
+  width: calc(100% - 1rem);
+  height: calc(200px + 5vw);
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-  margin: .5rem 0;
-  padding: 1rem;
+  margin: 1rem 0;
+  padding: .25rem;
 }
 
 .projects__project--title {
