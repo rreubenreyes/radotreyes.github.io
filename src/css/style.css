@@ -38,7 +38,7 @@ a {
 
 #social {
   color: #ccc;
-  flex-basis: 100%;
+  flex-basis: calc(100% - 20vw);
   font-family: 'Barlow', sans-serif;
   margin-bottom: 2rem;
   text-align: center;
