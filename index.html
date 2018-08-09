@@ -12,31 +12,47 @@
   <body>
     <div id="wrapper">
       <img id="logo" src="src/static/splash-dark.svg">
-      <div id="social"><span class="social__links">Developer with a diverse engineering background and a passion for helping others learn. San Jose State University graduate, based in the East Bay Area, CA. Find me on social media: <a class="loading__icon--twitter" href="https://twitter.com/radotreyes"><i class="fab fa-twitter"></i></a>&nbsp;
-            <a class="loading__icon--github" href="https://github.com/radotreyes"><i class="fab fa-github"></i></a>&nbsp;
-            <a class="loading__icon--linkedin" href="https://linkedin.com/in/reubenreyes"><i class="fab fa-linkedin"></i></a></span></div>
-      <div id="projects">
-        <div class="projects__project projects__project--1">
-          <span class="projects__project--title">Try Coding, It's Fun</span>
-          <img class="projects__project--img" src="./src/static/tcif.gif"/>
-          <span class="projects__project--desc">Web platform encouraging self-taught developers to love what they're coding. <a href="https://trycodingitsfun.com">See more</a></span>
+      <section id="social">
+	      	<div class="section__container">Developer with a diverse engineering background and a passion for helping others learn. San Jose State University graduate. Based in the East Bay Area, CA.<br><br>Find me on social media: 
+	      	<a class="loading__icon--twitter" href="https://twitter.com/radotreyes"><i class="fab fa-twitter"></i></a>&nbsp;
+	        <a class="loading__icon--github" href="https://github.com/radotreyes"><i class="fab fa-github"></i></a>&nbsp;
+	        <a class="loading__icon--linkedin" href="https://linkedin.com/in/reubenreyes"><i class="fab fa-linkedin"></i></a><br><br>
+	        <a href="https://www.dropbox.com/s/7r69joqfs4ib2jo/rreyes-cv.pdf">View my resume</a>
+    	</div>
+      </section>
+      <section id="languages">
+        <div class="site__title--main">Languages</div>
+        <div class="section__container">JavaScript, Python, HTML, CSS, C, C#</div>
+      </section>
+      <section id="technologies">
+        <div class="site__title--main">Technologies and Frameworks</div>
+        <div class="section__container">React, Redux, Gatsby, GraphQL, Styled Components, CSS Grid, CSS Flexbox, Git, Prettier, ESLint, *NIX, Django, Netlify</div>
+      </section>
+      <section id="projects">
+      	<div class="site__title--main">Projects</div>
+      	<div class="projects__wrapper">
+	        <div class="projects__project">
+	          <div class="site__title--sub">Try Coding, It's Fun</div>
+	          <img class="projects__project--img" src="./src/static/tcif.gif"/>
+	          <span class="projects__project--desc">Web platform encouraging self-taught developers to love what they're coding. Built with React, Gatsby, and Styled Components. <a href="https://trycodingitsfun.com">Go to the website</a></span>
+	        </div>
+	        <div class="projects__project">
+	          <span class="site__title--sub">I'm Silent Photography</span>
+	          <img class="projects__project--img" src="./src/static/silent.png"/>
+	          <span class="projects__project--desc">Freelance photographer portfolio site and CMS built on top of Django. Built with Django, Python, JavaScript, and Bootstrap. <a href="https://www.imsilentphotography.net">Go to the website</a></span>
+	        </div>
+	        <div class="projects__project">
+	          <span class="site__title--sub">YDKJS Exercises</span>
+	          <img class="projects__project--img" src="./src/static/ydkjs.gif"/>
+	          <span class="projects__project--desc">Maintainer of an open-source project dedicated to teaching JavaScript fundamentals. Built with React and React Context API to manage application state. <a href="https://ydkjs-exercises.com">Go to the website</a></span>
+	        </div>
+	        <div class="projects__project">
+	          <span class="site__title--sub">PBX Data Parser</span>
+	          <img class="projects__project--img" src="./src/static/parser.jpg"/>
+	          <span class="projects__project--desc">PBX outfile parser which writes erratically delimited data to spreadsheet software. Built with Python, TKinter and openpyxl for Windows and Unix systems. <a href="https://github.com/radotreyes/pbx_parse">View the repo on GitHub</a></span>
+	        </div>
         </div>
-        <div class="projects__project">
-          <span class="projects__project--title">I'm Silent Photography</span>
-          <img class="projects__project--img" src="./src/static/silent.png"/>
-          <span class="projects__project--desc">Freelance photographer portfolio site and CMS built on top of Django. <a href="https://imsilentphotography.net">See more</a></span>
-        </div>
-        <div class="projects__project">
-          <span class="projects__project--title">YDKJS Exercises</span>
-          <img class="projects__project--img" src="./src/static/ydkjs.gif"/>
-          <span class="projects__project--desc">Open-source project dedicated to teaching JavaScript fundamentals. GitHub Collaborator. <a href="https://ydkjs-exercises.com">See more</a></span>
-        </div>
-        <div class="projects__project">
-          <span class="projects__project--title">PBX Data Parser</span>
-          <img class="projects__project--img" src="./src/static/parser.jpg"/>
-          <span class="projects__project--desc">PBX outfile parser which writes erratically delimited data to spreadsheet software. <a href="https://github.com/radotreyes/pbx_parse">See more</a></span>
-        </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
