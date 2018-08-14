@@ -59,7 +59,7 @@ a:hover:after {
 
 #logo {
   display: block;
-  margin: 5vw 0 1.5rem;
+  margin: 5vmax 0 5vmax 1rem;
   margin-right: 3vw;	
   width: 80%;
 }
