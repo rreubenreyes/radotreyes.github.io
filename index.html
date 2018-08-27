@@ -1,66 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="referrer" content="origin">
-    <title>REUBEN REYES</title>
-    <!-- style -->
-    <link rel="stylesheet" href="src/css/style.css">
-    <!-- FA -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="src/static/logo.png">
-  </head>
-  <body>
-    <div id="wrapper">
-      <img id="logo" src="src/static/splash-dark.svg">
-      <section id="social">
-	      <div class="section__container">
-		<div class="site__title--main">About</div>
-		Developer with a diverse engineering background and a passion for helping others learn. San Jose State University graduate. Based in the East Bay Area, CA.<br><br>Find me on social media: 
-	      	<a class="loading__icon--twitter" href="https://twitter.com/radotreyes"><i class="fab fa-twitter"></i></a>&nbsp;
-	        <a class="loading__icon--github" href="https://github.com/radotreyes"><i class="fab fa-github"></i></a>&nbsp;
-	        <a class="loading__icon--linkedin" href="https://linkedin.com/in/reubenreyes"><i class="fab fa-linkedin"></i></a><br><br>
-	        <a href="./src/static/rreyes-cv.pdf">View my resume</a>
-    	</div>
-      </section>
-      <section id="languages">
-        <div class="section__container">
-        	<div class="site__title--main">Languages</div>JavaScript, Python, HTML, CSS, C, C#
-        </div>
-      </section>
-      <section id="technologies">
-        <div class="section__container">
-	    <div class="site__title--main">Technologies and Frameworks</div>
-	    	React, Redux, Gatsby, GraphQL, Styled Components, CSS Grid, CSS Flexbox, Git, Prettier, ESLint, *NIX, Django, Netlify
-	    </div>
-      </section>
-      <section id="projects">
-      	<br><br>
-      	<div class="site__title--centered">Projects</div>
-      	<div class="projects__wrapper">
-	        <div class="projects__project">
-	          <div class="site__title--sub">Try Coding, It's Fun</div>
-	          <img class="projects__project--img" src="./src/static/tcif.gif"/>
-	          <span class="projects__project--desc">Web platform encouraging self-taught developers to love what they're coding. Built with React, Gatsby, and Styled Components. <a href="https://trycodingitsfun.com">Go to the website</a></span>
-	        </div>
-	        <div class="projects__project">
-	          <span class="site__title--sub">I'm Silent Photography</span>
-	          <img class="projects__project--img" src="./src/static/silent.png"/>
-	          <span class="projects__project--desc">Photographer portfolio site and CMS built on top of Django for freelance photographer <a href="https://twitter.com/marymedovich">Mary Medovich</a>. Built with Django, Python, JavaScript, and Bootstrap. <a href="https://www.imsilentphotography.net">Go to the website</a></span>
-	        </div>
-	        <div class="projects__project">
-	          <span class="site__title--sub">YDKJS Exercises</span>
-	          <img class="projects__project--img" src="./src/static/ydkjs.gif"/>
-	          <span class="projects__project--desc">Maintainer of an open-source project dedicated to teaching JavaScript fundamentals. Built with React and React Context API to manage application state. <a href="https://ydkjs-exercises.com">Go to the website</a></span>
-	        </div>
-	        <div class="projects__project">
-	          <span class="site__title--sub">PBX Data Parser</span>
-	          <img class="projects__project--img" src="./src/static/parser.jpg"/>
-	          <span class="projects__project--desc">PBX outfile parser which writes erratically delimited data to spreadsheet software. Built with Python, TKinter and openpyxl for Windows and Unix systems. <a href="https://github.com/radotreyes/pbx_parse">View the repo on GitHub</a></span>
-	        </div>
-        </div>
-      </section>
-    </div>
-  </body>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="referrer" content="origin">
+	<title>REUBEN REYES</title>
+	<!-- style -->
+	<link rel="stylesheet" href="src/css/style.css">
+	<!-- FA -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+	 crossorigin="anonymous">
+	<!-- favicon -->
+	<link rel="icon" type="image/png" href="src/static/logo.png">
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="container__main">
+			<div class="logo">
+				<img class="logo__logo" src="src/static/splash-dark.svg">
+			</div>
+			<div class="main__section--about">
+				<div class="title">About</div>
+				<p>Developer with a diverse engineering background and a passion for helping others learn. San Jose State University
+					graduate.Based in the East Bay Area, CA.
+				</p>
+				<p>
+					<a class="button__link" href="./src/static/rreyes-cv.pdf"><div class="button">View my resume</div></a>
+				</p>
+
+			</div><!-- about -->
+
+			<div class="main__section--languages">
+				<div class="title">Languages</div>
+				<p>
+					JavaScript, Python, HTML, CSS, C, C#
+				</p>
+			</div> <!-- languages-->
+
+			<div class="main__section--technologies">
+				<div class="title">Technologies</div>
+				<p>
+					React, Redux, Gatsby, GraphQL, Styled Components, CSS Grid, CSS Flexbox, Git, Prettier, ESLint, *NIX, Django, Netlify
+				</p>
+			</div> <!-- technologies-->
+		</div>
+
+		<div class="separator"></div>
+
+		<div class="container__projects">
+			<div class="projects__title">
+				<div class="title">Projects</div>
+			</div>
+			<div class="projects__section--project-1">
+				<div class="subtitle">Try Coding, It's Fun</div>
+				<div class="project__image-wrapper"><img class="project__img" src="./src/static/tcif.gif" /></div>
+				<p class="project__desc">
+					Web platform encouraging self-taught developers to love what they're coding. Built with React, Gatsby, and Styled Components.
+				</p>
+				<p>
+					<a class="button__link" href="https://trycodingitsfun.com"><div class="button">Go to the website</div></a>
+				</p>
+
+			</div>
+			<div class="projects__section--project-2">
+				<div class="subtitle">I'm Silent Photography</div>
+				<div class="project__image-wrapper">
+					<img class="project__img" src="./src/static/silent.png" />
+				</div>
+				<p class="project__desc">Photographer portfolio site and CMS built on top of Django for freelance photographer
+					<a class="slide" href="https://twitter.com/marymedovich">Mary Medovich</a>. Built with Django, Python, JavaScript, and
+					Bootstrap.
+				</p>
+				<p>
+					<a class="button__link" href="https://www.imsilentphotography.net"><div class="button">Go to the website</div></a>
+				</p>
+			</div>
+			<div class="projects__section--project-3">
+				<div class="subtitle">YDKJS Exercises</div>
+				<div class="project__image-wrapper">
+					<img class="project__img" src="./src/static/ydkjs.gif" />
+				</div>
+				<p class="project__desc">Maintainer of an open-source project dedicated to teaching JavaScript fundamentals. Built with
+					React and React Context API to manage application state. </p>
+				<p>
+					<a class="button__link" href="https://ydkjs-exercises.com"><div class="button">Go to the website</div></a>
+				</p>
+			</div>
+			<div class="projects__section--project-4">
+				<div class="subtitle">PBX Data Parser</div>
+				<div class="project__image-wrapper">
+					<img class="project__img" src="./src/static/parser.jpg" />
+				</div>
+				<p class="project__desc">PBX outfile parser which writes erratically delimited data to spreadsheet software. Built with
+					Python, TKinter and openpyxl for Windows and Unix systems.</p>
+				<p>
+					<a class="button__link" href="https://github.com/radotreyes/pbx_parse"><div class="button">View on GitHub</div></a>
+				</p>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="social-media">
+				<a class="slide" href="https://twitter.com/radotreyes">
+					<i class="fab fa-twitter"></i>
+				</a>
+				<a class="slide" href="https://github.com/radotreyes">
+					<i class="fab fa-github"></i>
+				</a>
+				<a class="slide" href="https://linkedin.com/in/reubenreyes">
+					<i class="fab fa-linkedin"></i>
+				</a>
+			</div>
+		</div>
+	</div> <!-- wrapper -->
+</body>
+
 </html>
