@@ -4,44 +4,23 @@ import { Link, graphql } from 'gatsby'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Helmet from 'react-helmet'
 
-import Bio from '../components/Bio'
-import QuadDoors from '../components/QuadDoors'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
 
 import '../styles/style.scss'
 
-class Index extends Component {
+class Projects extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
   }
 
-  state = {
-    windowIsLandscape: false,
-  }
-
-  componentDidMount = () => {
-    window.addEventListener(`resize`, this.handleResize)
-  }
-
-  componentWillUnmount = () => {
-    window.removeEventListener(`resize`, this.handleResize)
-  }
-
-  handleResize = () => {
-    this.setState({
-      windowIsLandscape: window.matchMedia(`(orientation: landscape)`).matches,
-    })
-  }
-
   render() {
     const { data, location } = this.props
     const siteDescription = data.site.siteMetadata.description
-    const { windowIsLandscape } = this.state
 
     return (
-      <Layout location={location} title="Reuben Reyes">
+      <Layout location={location} title="projects page">
         <Helmet
           htmlAttributes={{ lang: `en` }}
           meta={[{ name: `description`, content: siteDescription }]}
@@ -54,16 +33,12 @@ class Index extends Component {
         >
           this is my website
         </h3>
-        <AniLink swipe direction="left" to="/blog">
-          blog
-        </AniLink>
-        {windowIsLandscape && <QuadDoors />}
       </Layout>
     )
   }
 }
 
-export default Index
+export default Projects
 
 export const pageQuery = graphql`
   query {
