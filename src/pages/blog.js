@@ -17,22 +17,36 @@ class BlogIndex extends Component {
 
   render() {
     const { data, location } = this.props
+    const siteTitle = data.site.siteMetadata.title
     const siteDescription = data.site.siteMetadata.description
+    const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={location} title="Reuben Reyes">
+      <Layout location={location} title={siteTitle}>
         <Helmet
           htmlAttributes={{ lang: `en` }}
           meta={[{ name: `description`, content: siteDescription }]}
-          title="REUBEN REYES"
+          title={siteTitle}
         />
-        <h3
-          style={{
-            marginBottom: rhythm(1 / 4),
-          }}
-        >
-          this is my website
-        </h3>
+        <Bio />
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return (
+            <div key={node.fields.slug}>
+              <h3
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
+              >
+                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  {title}
+                </Link>
+              </h3>
+              <small>{node.frontmatter.date}</small>
+              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            </div>
+          )
+        })}
       </Layout>
     )
   }

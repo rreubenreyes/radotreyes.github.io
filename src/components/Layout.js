@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
 
-class Layout extends React.Component {
+class Layout extends Component {
+  static propTypes = {
+    location: PropTypes.object.isRequired,
+    title: PropTypes.string.isRequired,
+    children: PropTypes.array.isRequired,
+  }
+
   render() {
     const { location, title, children } = this.props
-    const rootPath = `/`
+    const rootPath = `/blog`
     let header
 
-    if (location.pathname === rootPath) {
+    if (location.pathname === rootPath || `/`) {
       header = (
         <h1
           style={{
