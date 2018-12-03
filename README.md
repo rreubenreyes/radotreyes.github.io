@@ -1,6 +1,11 @@
-![Reuben Reyes Splash](https://cl.ly/1Q3b3p2A2o2M/[5d1fbed7d24cc483fae03d065df4ca31]_splash.png)
+# gatsby-starter-blog
+Gatsby starter for creating a blog
 
-## About
-Systems engineer with deep curiosity and aptitude in web development, programming, and computer science. Developer with a diverse engineering background and a passion for helping others learn. Self-directed and quick to adopt, understand, and utilize web technologies.
+Install this starter (assuming Gatsby is installed) by running from your CLI:
 
-I'm currently looking for full-time opportunities in/around the San Francisco Bay Area, CA!
+`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
+
+Or [view the live demo here](https://gatsby-starter-blog-demo.netlify.com/).
+
+## Running in development
+`gatsby develop`
