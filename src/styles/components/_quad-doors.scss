@@ -1,0 +1,157 @@
+.quad-doors {
+  position: absolute;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'door-1 door-2'
+    'door-4 door-3';
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  &.closed {
+    [class^='door__'] {
+      transition-timing-function: $transition-decel;
+      cursor: pointer;
+    }
+  }
+
+  &.open {
+    [class^='door__'] {
+      transition-timing-function: $transition-accel;
+    }
+    .door__first {
+      transform: translateX(-100%);
+    }
+    .door__second {
+      transform: translateY(-100%);
+    }
+    .door__third {
+      transform: translateX(100%);
+    }
+    .door__fourth {
+      transform: translateY(100%);
+    }
+  }
+}
+
+[class^='door__'] {
+  position: absolute;
+  background-color: $color-black;
+  box-shadow: inset 2px 4px 10px 4px rgba(darken($color-black, 5%), 0.05);
+  color: $color-white;
+  h1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  &:hover {
+    background-color: darken(desaturate($color-red, 20%), 10%);
+    h1 {
+      color: $color-black;
+    }
+  }
+}
+
+.door {
+  &__first {
+    grid-area: door-1;
+    border-right: 2px inset rgba(black, 0.1);
+    height: 100%;
+    width: 100%;
+    transition: transform 0.25s;
+    &:hover {
+      @keyframes portal-drop {
+        49% {
+          transform: translateY(100%);
+        }
+        50% {
+          opacity: 0;
+        }
+        51% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      h1 {
+        animation: 0.75s portal-drop forwards
+          cubic-bezier(0.24, 0.42, 0.57, 1.48) 0.125s;
+      }
+    }
+  }
+  &__second {
+    position: relative;
+    grid-area: door-2;
+    border-bottom: 2px inset rgba(black, 0.1);
+    height: 100%;
+    width: 100%;
+    transition: transform 0.25s 0.125s;
+    &:hover {
+      &:after,
+      &:before {
+        opacity: 1;
+      }
+      &:before {
+        transform: translateY(calc(50% - 5rem));
+      }
+      &:after {
+        transform: translateY(calc(-50% + 0.55rem));
+      }
+    }
+    &:after,
+    &:before {
+      opacity: 0;
+      position: absolute;
+      left: calc(50% - 5rem);
+      font-size: 2.5rem;
+      height: 100%;
+      width: 100%;
+      transition: 0.25s cubic-bezier(0.24, 0.42, 0.57, 1.48) 0.125s;
+      content: 'projects';
+    }
+    &:before {
+      transform: translateY(calc(50% - 2.5rem));
+    }
+    &:after {
+      transform: translateY(calc(-50% + 2.25rem));
+    }
+    h1 {
+      transition: 0.25s cubic-bezier(0.24, 0.42, 0.57, 1.48) 0.125s;
+    }
+  }
+  /* these last two will have javascript-based transitions */
+  &__third {
+    grid-area: door-3;
+    border-left: 2px inset rgba(black, 0.1);
+    height: 100%;
+    width: 100%;
+    transition: transform 0.25s 0.25s;
+    h1 {
+      transition: 0.25s cubic-bezier(0.24, 0.42, 0.57, 1.48) 0.125s;
+    }
+    &:hover {
+      h1 {
+        transform: skew(15deg, 10deg);
+      }
+    }
+  }
+  &__fourth {
+    grid-area: door-4;
+    border-top: 2px inset rgba(black, 0.1);
+    height: 100%;
+    width: 100%;
+    transition: transform 0.25s 0.375s;
+    h1 {
+      transition: 0.25s cubic-bezier(0.24, 0.42, 0.57, 1.48) 0.35s;
+    }
+  }
+}

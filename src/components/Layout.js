@@ -61,6 +61,7 @@ class Layout extends Component {
     }
     return (
       <div
+        className="layout"
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,

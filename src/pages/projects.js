@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'
