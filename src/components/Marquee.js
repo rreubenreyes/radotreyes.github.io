@@ -11,6 +11,6 @@ const Marquee = ({ children }) => (
 )
 
 Marquee.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.any.isRequired,
 }
 export default Marquee

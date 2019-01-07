@@ -9,7 +9,7 @@ class Layout extends Component {
   static propTypes = {
     location: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
-    children: PropTypes.array.isRequired,
+    children: PropTypes.any.isRequired,
   }
 
   render() {

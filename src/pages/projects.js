@@ -16,57 +16,68 @@ class Projects extends Component {
   }
 
   state = {
-    windowIsLandscape: false,
+    currentProjectsIndex: 0,
   }
 
-  componentDidMount = () => {
-    window.addEventListener(`resize`, this.handleResize)
-    this.handleResize()
-  }
-
-  componentWillUnmount = () => {
-    window.removeEventListener(`resize`, this.handleResize)
-  }
-
-  handleResize = () => {
+  handleNextProject = () => {
+    const { currentProjectsIndex } = this.state
+    const {
+      data: {
+        allContentfulProject: { edges: projects },
+      },
+    } = this.props
+    const nextProjectsIndex = currentProjectsIndex + 2
     this.setState({
-      windowIsLandscape: window.matchMedia(`(orientation: landscape)`).matches,
+      currentProjectsIndex:
+        nextProjectsIndex < projects.length
+          ? nextProjectsIndex
+          : currentProjectsIndex,
+    })
+  }
+
+  handlePrevProject = () => {
+    const { currentProjectsIndex } = this.state
+    const prevProjectsIndex = currentProjectsIndex - 2
+    this.setState({
+      currentProjectsIndex:
+        prevProjectsIndex >= 0 ? prevProjectsIndex : currentProjectsIndex,
     })
   }
 
   render() {
-    const { data, location } = this.props
-    const siteDescription = data.site.siteMetadata.description
-    const { windowIsLandscape } = this.state
+    const {
+      data: {
+        allContentfulProject: { edges },
+      },
+      location,
+    } = this.props
+    const projects = edges.map(({ node }) => ({
+      ...node,
+      description: node.description.internal.content,
+      featuredImage: node.featuredImage.file.url,
+    }))
+    console.log(projects)
+    const { currentProjectsIndex } = this.state
 
     return (
       <Layout location={location} title="Reuben Reyes">
-        <Helmet
-          htmlAttributes={{ lang: `en` }}
-          meta={[{ name: `description`, content: siteDescription }]}
-          title="REUBEN REYES"
-        />
-        <div className="grid">
-          <Marquee>Projects</Marquee>
-          <section className="skills">
-            <h2>fullstack web development</h2>
-            <ul>
-              <ListItem>javascript (react, es6)</ListItem>
-              <ListItem>css (sass, flexbox, grid</ListItem>
-              <ListItem>graphql</ListItem>
-              <ListItem>node (express)</ListItem>
-            </ul>
-            <h2>programming</h2>
-            <ul>
-              <ListItem>python, c, shell</ListItem>
-            </ul>
-            <h2>graphic design</h2>
-            <ul>
-              <ListItem>sketch</ListItem>
-              <ListItem>adobe photoshop</ListItem>
-            </ul>
-          </section>
-        </div>
+        <>
+          <div className="grid">
+            <Marquee>Projects</Marquee>
+            <section className="projects">
+              {projects
+                .slice(currentProjectsIndex, currentProjectsIndex + 2)
+                .map(({ title, featuredImage }) => (
+                  <div className="projects--project">
+                    {title}
+                    <img src={featuredImage} />
+                  </div>
+                ))}
+            </section>
+          </div>
+          <button onClick={this.handlePrevProject}>prev</button>
+          <button onClick={this.handleNextProject}>next</button>
+        </>
         {/* {windowIsLandscape && (
           <QuadDoors
             menuItems={{
@@ -86,10 +97,23 @@ export default Projects
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-        description
+    allContentfulProject {
+      edges {
+        node {
+          title
+          slug
+          description {
+            internal {
+              content
+            }
+          }
+          featuredImage {
+            id
+            file {
+              url
+            }
+          }
+        }
       }
     }
   }

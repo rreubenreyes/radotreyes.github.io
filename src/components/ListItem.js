@@ -13,7 +13,7 @@ const ListItem = ({ itemStyle, frontpage, children }) => (
 ListItem.propTypes = {
   itemStyle: PropTypes.string,
   frontpage: PropTypes.bool,
-  children: PropTypes.object.isRequired,
+  children: PropTypes.any.isRequired,
 }
 
 ListItem.defaultProps = {
