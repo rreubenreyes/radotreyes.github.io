@@ -1,0 +1,18 @@
+.frontpage {
+  display: grid;
+  grid-template-rows: auto 6fr 2fr;
+  align-items: start;
+  h1 {
+    svg {
+      height: 5.5rem;
+      width: 5.5rem;
+      margin-right: 1.5rem;
+    }
+  }
+  ul {
+    margin-left: 0.75rem;
+    li {
+      font-size: 1.5rem;
+    }
+  }
+}

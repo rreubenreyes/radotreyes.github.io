@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import TransitionLink from 'gatsby-plugin-transition-link'
+import { Link, graphql } from 'gatsby'
+// import TransitionLink from 'gatsby-plugin-transition-link'
 import Helmet from 'react-helmet'
 
-import QuadDoors from '../components/QuadDoors'
+// import QuadDoors from '../components/QuadDoors'
 import Layout from '../components/Layout'
-import { rhythm } from '../utils/typography'
-
-import '../styles/style.scss'
+import Logo from '../assets/logo.svg'
 
 class Index extends Component {
   static propTypes = {
@@ -47,30 +45,40 @@ class Index extends Component {
           meta={[{ name: `description`, content: siteDescription }]}
           title="REUBEN REYES"
         />
-        <h3>this is my website</h3>
-        <TransitionLink
-          to="/blog"
-          exit={{
-            trigger: ({ node }) => {
-              /* eslint-disable no-param-reassign */
-              node.style.backgroundColor = `blue`
-            },
-            delay: 0,
-            length: 100,
-            zIndex: 0,
-          }}
-          entry={{
-            trigger: ({ entry, exit, node }) => {
-              console.log(entry, exit, node)
-            },
-            delay: 0,
-            length: 100,
-            zIndex: 1,
-          }}
-        >
-          blog
-        </TransitionLink>
-        {windowIsLandscape && (
+        <div className="frontpage">
+          <h1 className="marquee">
+            <Logo />
+            Reuben Reyes
+          </h1>
+          <ul className="frontpage--menu">
+            <li>
+              <div className="list--bullet">>_&nbsp;</div>
+              software engineer
+              {` `}
+              <Link to="/">[go to skills section]</Link>
+            </li>
+            <li>
+              <div className="list--bullet">www</div>
+              web developer
+              {` `}
+              <Link to="/">[go to projects section]</Link>
+            </li>
+            <li>
+              <div className="list--bullet">(?)</div>
+              etc.
+              {` `}
+              <Link to="/">[go to about section]</Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              this website is also my
+              {` `}
+              <Link to="/">[blog]</Link>
+            </li>
+          </ul>
+        </div>
+        {/* {windowIsLandscape && (
           <QuadDoors
             menuItems={{
               first: `home`,
@@ -79,7 +87,7 @@ class Index extends Component {
               fourth: `blog`,
             }}
           />
-        )}
+        )} */}
       </Layout>
     )
   }
@@ -93,20 +101,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-        }
       }
     }
   }

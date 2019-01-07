@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'
-import { rhythm } from '../utils/typography'
 
 import '../styles/style.scss'
 
@@ -25,13 +24,7 @@ class Projects extends Component {
           meta={[{ name: `description`, content: siteDescription }]}
           title="REUBEN REYES"
         />
-        <h3
-          style={{
-            marginBottom: rhythm(1 / 4),
-          }}
-        >
-          this is my website
-        </h3>
+        <h3>this is my website</h3>
       </Layout>
     )
   }
@@ -45,20 +38,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-        }
       }
     }
   }

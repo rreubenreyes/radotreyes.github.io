@@ -1,0 +1,32 @@
+.layout {
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 15vw;
+  grid-area: sidebar;
+  background-color: $color-black;
+  box-shadow: $box-shadow;
+  color: $color-text-dark;
+  height: 100%;
+  &--nav {
+    padding-top: 20vh;
+    margin-left: 2rem;
+    line-height: 0.75rem;
+  }
+  @media screen and (orientation: portrait) {
+    display: none;
+  }
+}
+
+.main {
+  margin-left: 15vw;
+  padding: 5% calc(1rem + 1vw);
+  @media screen and (orientation: portrait) {
+    margin-left: 0;
+  }
+}

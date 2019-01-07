@@ -1,14 +1,17 @@
 @import 'partials/index';
 @import 'components/index';
 @import 'pages/index';
-@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,500i');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,700i');
 html {
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
 body {
-  font-family: 'Montserrat Alternates', sans-serif;
+  position: relative;
+  background-color: $color-dark;
+  color: $color-text;
+  font-family: 'Roboto Mono', monospace;
   font-size: 16px;
   overflow-x: hidden;
   height: 100vh;
@@ -18,11 +21,48 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 5rem;
+  color: $color-text-header;
+  font-style: italic;
+  font-weight: bold;
+  &.marquee {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 320px) {
+      justify-content: space-around;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 2rem;
+  }
 }
 
-.layout {
-  height: 100%;
-  width: 100%;
+ul {
+  li {
+    line-height: 2rem;
+    list-style-type: none;
+    .list--bullet {
+      display: inline;
+      color: $color-text-dark;
+      margin-right: 3.2rem;
+    }
+    @media screen and (orientation: portrait) {
+      .list--bullet {
+        display: block;
+        padding-top: $rhythm-long;
+      }
+      &:first-of-type {
+        .list--bullet {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  font-style: italic;
+  color: $color-secondary;
 }
