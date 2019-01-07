@@ -8,6 +8,21 @@ module.exports = {
   pathPrefix: `/gatsby-starter-blog`,
   plugins: [
     {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `rddql7s68w9x`,
+        accessToken: `4ea527682ac35ef316f54f58ce27b6bb4572f1689d4962e92fdc2b2212668a48`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: `${__dirname}/src/assets/`,
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: [`${__dirname}/src/styles`],
@@ -66,11 +81,5 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
   ],
 }
