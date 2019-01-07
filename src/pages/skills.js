@@ -6,10 +6,10 @@ import Helmet from 'react-helmet'
 
 // import QuadDoors from '../components/QuadDoors'
 import Layout from '../components/Layout'
-import Marquee from '../components/Marquee'
 import ListItem from '../components/ListItem'
+import Marquee from '../components/Marquee'
 
-class Index extends Component {
+class Skills extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
@@ -46,32 +46,26 @@ class Index extends Component {
           meta={[{ name: `description`, content: siteDescription }]}
           title="REUBEN REYES"
         />
-        <div className="frontpage-grid">
-          <Marquee>Reuben Reyes</Marquee>
-          <ul className="frontpage-grid--menu">
-            <ListItem frontpage itemStyle={`>_ `}>
-              software engineer
-              {` `}
-              <Link to="/skills">[go to skills section]</Link>
-            </ListItem>
-            <ListItem frontpage itemStyle="www">
-              web developer
-              {` `}
-              <Link to="/">[go to projects section]</Link>
-            </ListItem>
-            <ListItem frontpage itemStyle="(?)">
-              etc.
-              {` `}
-              <Link to="/">[go to about section]</Link>
-            </ListItem>
-          </ul>
-          <ul>
-            <li>
-              this website is also my
-              {` `}
-              <Link to="/">[blog]</Link>
-            </li>
-          </ul>
+        <div className="grid">
+          <Marquee>Skills</Marquee>
+          <section className="skills">
+            <h2>fullstack web development</h2>
+            <ul>
+              <ListItem>javascript (react, es6)</ListItem>
+              <ListItem>css (sass, flexbox, grid</ListItem>
+              <ListItem>graphql</ListItem>
+              <ListItem>node (express)</ListItem>
+            </ul>
+            <h2>programming</h2>
+            <ul>
+              <ListItem>python, c, shell</ListItem>
+            </ul>
+            <h2>graphic design</h2>
+            <ul>
+              <ListItem>sketch</ListItem>
+              <ListItem>adobe photoshop</ListItem>
+            </ul>
+          </section>
         </div>
         {/* {windowIsLandscape && (
           <QuadDoors
@@ -88,7 +82,7 @@ class Index extends Component {
   }
 }
 
-export default Index
+export default Skills
 
 export const pageQuery = graphql`
   query {

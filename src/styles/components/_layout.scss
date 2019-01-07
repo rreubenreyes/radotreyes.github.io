@@ -8,7 +8,6 @@
   top: 0;
   height: 100%;
   width: 15vw;
-  grid-area: sidebar;
   background-color: $color-black;
   box-shadow: $box-shadow;
   color: $color-text-dark;
@@ -25,8 +24,9 @@
 
 .main {
   margin-left: 15vw;
-  padding: 5% calc(1rem + 1vw);
+  padding: 3rem;
   @media screen and (orientation: portrait) {
     margin-left: 0;
+    padding: 1.5rem;
   }
 }

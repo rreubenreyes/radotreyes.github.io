@@ -5,6 +5,7 @@
 html {
   overflow-x: hidden;
   overflow-y: scroll;
+  font-size: 16px;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
   background-color: $color-dark;
   color: $color-text;
   font-family: 'Roboto Mono', monospace;
-  font-size: 16px;
   overflow-x: hidden;
   height: 100vh;
   width: 100vw;
@@ -29,30 +29,52 @@ h1 {
     display: flex;
     align-items: center;
     @media screen and (max-width: 320px) {
-      justify-content: space-around;
+      justify-content: flex-start;
+    }
+    svg {
+      height: 5.5rem;
+      width: 5.5rem;
+      margin-right: 1.5rem;
+      @media screen and (max-width: 414px) {
+        margin-right: 1rem;
+      }
     }
   }
-  @media screen and (max-width: 320px) {
-    font-size: 2rem;
+
+  @media screen and (max-width: 414px) {
+    font-size: 2.75rem;
   }
+  @media screen and (max-width: 320px) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  margin: $rhythm-longer auto $rhythm-shorter;
+  font-style: italic;
+  color: $color-text-header;
+  font-weight: 200;
 }
 
 ul {
   li {
     line-height: 2rem;
     list-style-type: none;
-    .list--bullet {
+    [class^='list--bullet'] {
       display: inline;
       color: $color-text-dark;
       margin-right: 3.2rem;
+      @media screen and (max-width: 414px) {
+        margin-right: 1rem;
+      }
     }
     @media screen and (orientation: portrait) {
-      .list--bullet {
+      .list--bullet__frontpage {
         display: block;
         padding-top: $rhythm-long;
       }
       &:first-of-type {
-        .list--bullet {
+        [class^='list--bullet'] {
           padding-top: 0;
         }
       }
