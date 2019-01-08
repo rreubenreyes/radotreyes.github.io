@@ -28,6 +28,54 @@
       bottom: 0;
       padding: 1rem;
       background-color: $color-black;
+      transition: 0.1s $transition-decel;
+      overflow: hidden;
+    }
+
+    &:hover {
+      .project--title {
+        &:before,
+        &:after {
+          content: attr(data-content);
+          padding: 1rem;
+          top: 0;
+          color: $color-white;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: $color-black;
+        }
+        &:before {
+          left: -1px;
+          animation: glitch-before 1s infinite linear alternate-reverse;
+        }
+        &:after {
+          left: 1px;
+          animation: glitch-after 1s infinite linear alternate;
+        }
+      }
+    }
+  }
+}
+
+@keyframes glitch-after {
+  $steps: 10;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip-path: inset(
+        percentage(random(35) / 100) 0 percentage(random(70) / 100) 0
+      );
+      text-shadow: ((random(20) / 10) * -1) + px 0 $color-primary-dark;
+    }
+  }
+}
+
+@keyframes glitch-before {
+  $steps: 10;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip-path: inset(percentage(random(45) / 100) 0 0 0);
+      text-shadow: (random(20) / 10) + px 0 $color-text;
     }
   }
 }

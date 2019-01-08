@@ -6,7 +6,6 @@ import Helmet from 'react-helmet'
 
 // import QuadDoors from '../components/QuadDoors'
 import Layout from '../components/Layout'
-import ListItem from '../components/ListItem'
 import Marquee from '../components/Marquee'
 
 class Projects extends Component {
@@ -56,7 +55,6 @@ class Projects extends Component {
       description: node.description.internal.content,
       featuredImage: node.featuredImage.file.url,
     }))
-    console.log(projects)
     const { currentProjectsIndex } = this.state
 
     return (
@@ -70,7 +68,9 @@ class Projects extends Component {
                 .map(({ title, featuredImage }) => (
                   <div className="projects--project">
                     <img src={featuredImage} alt={title} />
-                    <span className="project--title">{title}</span>
+                    <span className="project--title" data-content={title}>
+                      {title}
+                    </span>
                   </div>
                 ))}
             </section>
