@@ -10,38 +10,51 @@ import '../styles/style.scss'
 
 class BlogIndex extends Component {
   static propTypes = {
-    data: PropTypes.object.isRequired,
+    data: PropTypes.shape({
+      site: PropTypes.shape({
+        siteMetadata: PropTypes.shape({
+          title: PropTypes.string.isRequired,
+          description: PropTypes.string.isRequired,
+        }).isRequired,
+      }).isRequired,
+      allContentfulBlogPost: PropTypes.object.isRequired,
+    }).isRequired,
     location: PropTypes.object.isRequired,
   }
 
   render() {
-    const { data, location } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const siteDescription = data.site.siteMetadata.description
-    const posts = data.allMarkdownRemark.edges
+    const {
+      data: {
+        site: {
+          siteMetadata: { title: siteTitle, description: siteDescription },
+        },
+        allContentfulBlogPost: { edges: posts },
+      },
+      location,
+    } = this.props
 
     return (
       <Layout location={location} title={siteTitle}>
-        <Helmet
+        {/* <Helmet
           htmlAttributes={{ lang: `en` }}
           meta={[{ name: `description`, content: siteDescription }]}
           title={siteTitle}
-        />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
-        })}
+        /> */}
+        {posts.map(({
+          node: {
+            title, slug, date, excerpt,
+          },
+        }) => (
+          <div key={slug}>
+            <h3>
+              <Link style={{ boxShadow: `none` }} to={slug}>
+                {title}
+              </Link>
+            </h3>
+            <small>{date}</small>
+            <p dangerouslySetInnerHTML={{ __html: excerpt }} />
+          </div>
+        ))}
       </Layout>
     )
   }
@@ -55,6 +68,16 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    allContentfulBlogPost(sort: { fields: [date], order: DESC }) {
+      edges {
+        node {
+          title
+          slug
+          date(formatString: "YYYY MM DD")
+          excerpt
+        }
       }
     }
   }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-// import TransitionLink from 'gatsby-plugin-transition-link'
 import Helmet from 'react-helmet'
 
 // import QuadDoors from '../components/QuadDoors'
@@ -53,7 +52,7 @@ class Index extends Component {
           <p style={{ marginLeft: `.6rem` }}>
             this website is also my
             {` `}
-            <Link to="/">[blog]</Link>
+            <Link to="/blog">[blog]</Link>
           </p>
         </div>
       </Layout>

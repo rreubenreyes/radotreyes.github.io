@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
+import Markdown from 'react-markdown'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
@@ -60,7 +61,9 @@ class BlogPostTemplate extends Component {
         <h1>{postTitle}</h1>
         <p>{postDate}</p>
         {/* <div dangerouslySetInnerHTML={{ __html: post.html }} /> */}
-        <div>{postContent}</div>
+        <div>
+          <Markdown source={postContent} />
+        </div>
         {/* previous/next posts follow */}
         {/* <ul
           style={{
