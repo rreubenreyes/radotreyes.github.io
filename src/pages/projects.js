@@ -62,21 +62,27 @@ class Projects extends Component {
     return (
       <Layout location={location} title="Reuben Reyes">
         <>
-          <div className="grid">
+          <div className="projects--grid">
             <Marquee>Projects</Marquee>
             <section className="projects">
               {projects
                 .slice(currentProjectsIndex, currentProjectsIndex + 2)
                 .map(({ title, featuredImage }) => (
                   <div className="projects--project">
-                    {title}
-                    <img src={featuredImage} />
+                    <img src={featuredImage} alt={title} />
+                    <span className="project--title">{title}</span>
                   </div>
                 ))}
             </section>
+            <div className="projects--buttons">
+              <button type="button" onClick={this.handlePrevProject}>
+                prev
+              </button>
+              <button type="button" onClick={this.handleNextProject}>
+                next
+              </button>
+            </div>
           </div>
-          <button onClick={this.handlePrevProject}>prev</button>
-          <button onClick={this.handleNextProject}>next</button>
         </>
         {/* {windowIsLandscape && (
           <QuadDoors

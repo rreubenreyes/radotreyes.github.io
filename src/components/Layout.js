@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
 
 import '../styles/style.scss'
 import Sidebar from './Sidebar'

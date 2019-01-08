@@ -15,29 +15,15 @@ class Index extends Component {
     location: PropTypes.object.isRequired,
   }
 
-  state = {
-    windowIsLandscape: false,
-  }
-
-  componentDidMount = () => {
-    window.addEventListener(`resize`, this.handleResize)
-    this.handleResize()
-  }
-
-  componentWillUnmount = () => {
-    window.removeEventListener(`resize`, this.handleResize)
-  }
-
-  handleResize = () => {
-    this.setState({
-      windowIsLandscape: window.matchMedia(`(orientation: landscape)`).matches,
-    })
-  }
-
   render() {
-    const { data, location } = this.props
+    const {
+      data,
+      data: {
+        contentfulFrontPage: { listItems },
+      },
+      location,
+    } = this.props
     const siteDescription = data.site.siteMetadata.description
-    const { windowIsLandscape } = this.state
 
     return (
       <Layout location={location} title="Reuben Reyes">
@@ -49,40 +35,27 @@ class Index extends Component {
         <div className="frontpage-grid">
           <Marquee>Reuben Reyes</Marquee>
           <ul className="frontpage-grid--menu">
-            <ListItem frontpage itemStyle={`>_ `}>
-              software engineer
-              {` `}
-              <Link to="/skills">[go to skills section]</Link>
-            </ListItem>
-            <ListItem frontpage itemStyle="www">
-              web developer
-              {` `}
-              <Link to="/">[go to projects section]</Link>
-            </ListItem>
-            <ListItem frontpage itemStyle="(?)">
-              etc.
-              {` `}
-              <Link to="/">[go to about section]</Link>
-            </ListItem>
+            {listItems.map(
+              ({
+                bulletStyle,
+                content,
+                frontpageLinkRoute,
+                frontpageLinkText,
+              }) => (
+                <ListItem frontpage itemStyle={bulletStyle}>
+                  {content}
+                  {` `}
+                  <Link to={frontpageLinkRoute}>{frontpageLinkText}</Link>
+                </ListItem>
+              ),
+            )}
           </ul>
-          <ul>
-            <li>
-              this website is also my
-              {` `}
-              <Link to="/">[blog]</Link>
-            </li>
-          </ul>
+          <p style={{ marginLeft: `.6rem` }}>
+            this website is also my
+            {` `}
+            <Link to="/">[blog]</Link>
+          </p>
         </div>
-        {/* {windowIsLandscape && (
-          <QuadDoors
-            menuItems={{
-              first: `home`,
-              second: `projects`,
-              third: `about`,
-              fourth: `blog`,
-            }}
-          />
-        )} */}
       </Layout>
     )
   }
@@ -96,6 +69,14 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    contentfulFrontPage(id: { eq: "eb0dfa23-378b-509c-bb20-fe18834669a9" }) {
+      listItems {
+        bulletStyle
+        content
+        frontpageLinkRoute
+        frontpageLinkText
       }
     }
   }

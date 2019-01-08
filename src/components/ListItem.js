@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ListItem = ({ itemStyle, frontpage, children }) => (
-  <li>
-    <div className={`list--bullet${frontpage ? `__frontpage` : ``}`}>
-      {itemStyle}
-    </div>
-    {children}
-  </li>
-)
+const ListItem = ({ itemStyle, frontpage, children }) => {
+  const modifier = frontpage ? `__frontpage` : ``
+  return (
+    <li className={`list${modifier}`}>
+      <span className={`list--bullet${modifier}`}>{itemStyle}</span>
+      <span className="list--content">{children}</span>
+    </li>
+  )
+}
 
 ListItem.propTypes = {
   itemStyle: PropTypes.string,

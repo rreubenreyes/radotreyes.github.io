@@ -9,7 +9,7 @@ import Layout from '../components/Layout'
 import ListItem from '../components/ListItem'
 import Marquee from '../components/Marquee'
 
-class Skills extends Component {
+class About extends Component {
   static propTypes = {
     data: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
@@ -47,25 +47,31 @@ class Skills extends Component {
           title="REUBEN REYES"
         />
         <div className="grid">
-          <Marquee>Skills</Marquee>
-          <section className="skills">
-            <h2>fullstack web development</h2>
+          <Marquee>About</Marquee>
+          <section className="about">
+            <h2>hi, i'm reuben</h2>
+            <p>
+              software engineer at Human API, San Jose State University
+              graduate, freelance web developer
+            </p>
+            <h2>what i do</h2>
             <ul>
-              <ListItem>javascript (react, es6)</ListItem>
-              <ListItem>css (sass, flexbox, grid)</ListItem>
+              <ListItem>try out weird ux designs</ListItem>
               <ListItem>
-                graphql (apollo, graphql yoga, prisma, hasura)
+                co-organize a meetup group in northern california
               </ListItem>
-              <ListItem>node (express)</ListItem>
+              <ListItem>
+                pick apart web frameworks in the quest to build my own
+              </ListItem>
+              <ListItem>contribute to open source</ListItem>
             </ul>
-            <h2>programming</h2>
+            <h2>what's going on right now</h2>
             <ul>
-              <ListItem>python, c, shell</ListItem>
-            </ul>
-            <h2>graphic design</h2>
-            <ul>
-              <ListItem>sketch</ListItem>
-              <ListItem>adobe photoshop</ListItem>
+              <ListItem>
+                writing only typescript in 2019 (except this portfolio, oops)
+              </ListItem>
+              <ListItem>studying low-level computer architecture</ListItem>
+              <ListItem>working on a crafting game</ListItem>
             </ul>
           </section>
         </div>
@@ -84,7 +90,7 @@ class Skills extends Component {
   }
 }
 
-export default Skills
+export default About
 
 export const pageQuery = graphql`
   query {
