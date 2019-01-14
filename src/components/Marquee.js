@@ -6,7 +6,7 @@ import Logo from '../assets/logo.svg'
 const Marquee = ({ children }) => (
   <h1 className="marquee">
     <Logo />
-    {children}
+    <span>{children}</span>
   </h1>
 )
 

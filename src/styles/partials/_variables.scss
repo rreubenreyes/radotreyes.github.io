@@ -1,9 +1,10 @@
 /* shadows */
-$box-shadow: 2px 0 4px 4px rgba(black, 0.15);
+$box-shadow: 2px 0 2px 0px rgba(black, 0.15);
 
 /* transitions */
-$transition-decel: cubic-bezier(0.4, 0, 1, 1);
 $transition-accel: cubic-bezier(0, 0, 0.2, 1);
+$transition-decel: cubic-bezier(0.4, 0, 1, 1);
+$transition-decel-hard: cubic-bezier(0.1, 1.15, 0.5, 1);
 
 /* rhythm */
 $rhythm-shorter: 0.25rem;

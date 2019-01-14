@@ -2,6 +2,7 @@
   overflow: hidden;
   &--grid {
     display: grid;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(3, auto);
     h1 {
       margin-bottom: $rhythm-longer !important;
@@ -14,45 +15,119 @@
     margin-bottom: $rhythm-longer;
     overflow: hidden;
     width: 100%;
+    transition: 0.5s ease-in-out;
     img {
       position: relative;
+      height: auto;
       width: 100%;
       bottom: 50%;
       z-index: -1;
+      @media screen and (max-width: 414px) {
+        min-width: 100%;
+        height: 100%;
+        bottom: 0;
+      }
     }
+    .project {
+      &--title,
+      &--meta {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-style: italic;
+      }
+      &--title {
+        display: grid;
+        grid-template-columns: auto 0;
+        justify-content: center;
+        align-content: center;
+        grid-gap: 0.25rem;
+        align-items: center;
+        &__title {
+          position: relative;
+          background-color: rgba($color-black, 0.75);
+          color: $color-white;
+          padding: 1rem;
+          overflow: hidden;
+          z-index: 2;
+        }
+        &__link {
+          a {
+            display: none;
+          }
+        }
+      }
+      &--meta {
+        transform: translateY(4rem);
+        transition: 0.75s $transition-decel-hard 0.125s;
+        @for $i from 1 through 2 {
+          span {
+            position: relative;
+            background-color: $color-black;
+            transform: translateY(0);
+            transition: 0.75s $transition-decel-hard 0.125s;
+            padding: 1rem;
+            margin-right: 0.25rem;
+          }
+        }
+      }
+    }
+
     .project--title {
-      position: absolute;
-      font-style: italic;
-      color: $color-white;
-      left: 0;
-      bottom: 0;
-      padding: 1rem;
-      background-color: $color-black;
-      transition: 0.1s $transition-decel;
-      overflow: hidden;
+      transition: 0.75s $transition-decel-hard;
     }
 
     &:hover {
       .project--title {
-        &:before,
-        &:after {
-          content: attr(data-content);
-          padding: 1rem;
-          top: 0;
-          color: $color-white;
-          position: absolute;
-          width: 100%;
-          height: 100%;
+        &__title {
+          background-color: darken($color-black, 2.5%);
+          &:before,
+          &:after {
+            background-color: $color-black;
+            color: $color-white;
+            content: attr(data-content);
+            height: 100%;
+            padding: 1rem;
+            position: absolute;
+            top: 0;
+            width: 100%;
+          }
+          &:before {
+            left: -1px;
+            animation: glitch-before 1s infinite linear alternate-reverse;
+          }
+          &:after {
+            left: 1px;
+            animation: glitch-after 1s infinite linear alternate;
+          }
+        }
+      }
+    }
+
+    &.active {
+      background-color: rgba($color-secondary, 0.15);
+      .project--title {
+        grid-template-columns: auto 1fr;
+        transform: translateY(calc(-1 * 20vh - 4.1rem));
+        height: 1rem;
+        &__title {
           background-color: $color-black;
+          &:before,
+          &:after {
+            display: none;
+          }
         }
-        &:before {
-          left: -1px;
-          animation: glitch-before 1s infinite linear alternate-reverse;
+        &__link {
+          background-color: $color-black;
+          padding: 1rem;
+          a {
+            display: inline;
+          }
         }
-        &:after {
-          left: 1px;
-          animation: glitch-after 1s infinite linear alternate;
-        }
+      }
+      .project--meta {
+        transform: translateY(-1rem);
+        height: 1rem;
       }
     }
   }

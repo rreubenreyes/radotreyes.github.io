@@ -18,6 +18,11 @@ class Projects extends Component {
     currentProjectsIndex: 0,
   }
 
+  handleProjectClick = (e) => {
+    console.log(e.target.classList)
+    e.target.classList.toggle(`active`)
+  }
+
   handleNextProject = () => {
     const { currentProjectsIndex } = this.state
     const {
@@ -54,6 +59,7 @@ class Projects extends Component {
       ...node,
       description: node.description.internal.content,
       featuredImage: node.featuredImage.file.url,
+      technologiesUsed: node.technologiesUsed.join(` // `),
     }))
     const { currentProjectsIndex } = this.state
 
@@ -65,14 +71,39 @@ class Projects extends Component {
             <section className="projects">
               {projects
                 .slice(currentProjectsIndex, currentProjectsIndex + 2)
-                .map(({ title, featuredImage }) => (
-                  <div className="projects--project">
-                    <img src={featuredImage} alt={title} />
-                    <span className="project--title" data-content={title}>
-                      {title}
-                    </span>
-                  </div>
-                ))}
+                .map(
+                  ({
+                    description,
+                    externalLink,
+                    technologiesUsed,
+                    title,
+                    featuredImage,
+                  }) => (
+                    <div
+                      className="projects--project"
+                      onClick={this.handleProjectClick}
+                    >
+                      <img src={featuredImage} alt={title} />
+                      <span className="project--title">
+                        <span
+                          className="project--title__title"
+                          data-content={title}
+                        >
+                          {title}
+                        </span>
+                        <span className="project--title__link">
+                          <a href={externalLink} className="link--external">
+                            [go to project]
+                          </a>
+                        </span>
+                      </span>
+                      <span className="project--meta">
+                        <span>{description}</span>
+                        <span>{technologiesUsed}</span>
+                      </span>
+                    </div>
+                  ),
+                )}
             </section>
             <div className="projects--buttons">
               <button type="button" onClick={this.handlePrevProject}>
@@ -107,7 +138,8 @@ export const pageQuery = graphql`
       edges {
         node {
           title
-          slug
+          externalLink
+          technologiesUsed
           description {
             internal {
               content

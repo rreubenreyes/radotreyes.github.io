@@ -20,7 +20,6 @@ body {
 }
 
 h1 {
-  font-size: 5rem;
   color: $color-text-header;
   font-style: italic;
   font-weight: bold;
@@ -37,6 +36,7 @@ h1 {
       justify-content: flex-start;
     }
     svg {
+      flex-shrink: 0;
       height: 5.5rem;
       width: 5.5rem;
       margin-right: 1.5rem;
@@ -44,13 +44,12 @@ h1 {
         margin-right: 1rem;
       }
     }
-  }
-
-  @media screen and (max-width: 414px) {
-    font-size: 2.75rem;
-  }
-  @media screen and (max-width: 320px) {
-    font-size: 2.5rem;
+    span {
+      font-size: 4vmax;
+      @media screen and (orientation: portrait) {
+        font-size: auto;
+      }
+    }
   }
 }
 
