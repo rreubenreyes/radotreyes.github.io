@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="684px" height="684px" viewBox="0 0 684 684" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="90.8130273%" y1="146.517095%" x2="40.0443845%" y2="39.3100712%" id="linearGradient-1">
+            <stop stop-color="#FF8F77" offset="0%"></stop>
+            <stop stop-color="#F25189" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="2.53371973%" y1="146.060383%" x2="59.0384416%" y2="46.0672113%" id="linearGradient-2">
+            <stop stop-color="#FF8F77" offset="0%"></stop>
+            <stop stop-color="#F25189" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="61.8957401%" y1="123.884537%" x2="52.4222837%" y2="46.0672113%" id="linearGradient-3">
+            <stop stop-color="#FF8F77" offset="0%"></stop>
+            <stop stop-color="#F25189" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="29.9658769%" y1="130.77865%" x2="52.666728%" y2="46.0672113%" id="linearGradient-4">
+            <stop stop-color="#FF8F77" offset="0%"></stop>
+            <stop stop-color="#F25189" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shards" transform="translate(327.557927, 341.775404) rotate(-3.000000) translate(-327.557927, -341.775404) translate(85.557927, 57.275404)">
+            <path d="M189.513577,485.676753 L16.3201758,293.073506 C8.63013555,268.711494 3.49385754,242.890427 1.30661413,215.986426 C0.889572466,210.85664 0.584460786,205.745515 0.389001603,200.65613 L192.792981,486.906847 C191.697063,486.504381 190.60391,486.094332 189.513573,485.676752 Z" id="shard-1" fill="url(#linearGradient-1)"></path>
+            <path d="M451.958062,424.688352 L273.503393,566.295272 L483.862699,331.112053 C483.034662,335.401997 482.125099,339.696892 481.132887,343.994636 C474.489239,372.771435 464.571146,399.809019 451.958044,424.688367 Z" id="shard-4" fill="url(#linearGradient-2)"></path>
+            <path d="M257.856437,564.092131 L12.2093438,173.866767 C72.6841269,86.1660601 165.48614,22.4757083 273.4056,0.00548186098 C259.154202,102.883742 250.86589,225.930654 250.86589,358.140358 C250.86589,430.096573 253.321029,499.338614 257.856437,564.092131 L257.856437,564.092131 Z" id="shard-2" fill="url(#linearGradient-3)"></path>
+            <path d="M263.185788,568.444314 C268.507455,534.662843 273.381774,499.933093 277.736688,464.465162 C292.945383,340.600283 299.82947,223.93845 299.201889,123.905056 C376.739223,164.111411 439.350909,227.349008 479.163083,303.539762 L263.185788,568.444314 L263.185788,568.444314 Z" id="shard-3" fill="url(#linearGradient-4)"></path>
+        </g>
+    </g>
+</svg>

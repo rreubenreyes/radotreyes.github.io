@@ -1,0 +1,48 @@
+a:hover {
+    .project--title {
+        &__title {
+            background-color: darken(#161616, 2.5%);
+            &:before,
+            &:after {
+                background-color: #161616;
+                color: #ccc;
+                content: attr(data-content);
+                height: 100%;
+                padding: 1rem;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+            &:before {
+                left: -1px;
+                animation: glitch-before 1s infinite linear alternate-reverse;
+            }
+            &:after {
+                left: 1px;
+                animation: glitch-after 1s infinite linear alternate;
+            }
+        }
+    }
+}
+
+@keyframes glitch-after {
+    $steps: 10;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip-path: inset(
+                percentage(random(35) / 100) 0 percentage(random(70) / 100) 0
+            );
+            text-shadow: ((random(20) / 10) * -1) + px #161616;
+        }
+    }
+}
+
+@keyframes glitch-before {
+    $steps: 10;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip-path: inset(percentage(random(45) / 100) 0 0 0);
+            text-shadow: (random(20) / 10) + px 0 #161616;
+        }
+    }
+}
