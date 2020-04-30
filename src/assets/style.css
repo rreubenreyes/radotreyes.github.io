@@ -37,6 +37,7 @@ body {
 }
 
 h1, h2, h3 {
+    background-color: var(--nsthemedark__color--primary);
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -44,7 +45,7 @@ h1, h2, h3 {
     background-image: var(--nsthemedark__color--gradient);
 }
 
-h1    { font-size: 2.25rem; line-height: 2rem }
+h1    { font-size: 2.25rem; line-height: 100% }
 h2    { font-size: 2.0rem }
 h3    { font-size: 1.75rem }
 p, li { font-size: 1rem }
@@ -67,7 +68,7 @@ img.header__logo {
 }
 
 @media (min-width: 400px) {
-    h1 { line-height: 2.625rem }
+    h1 { line-height: normal }
 }
 
 @media (min-width: 768px) {
@@ -156,6 +157,7 @@ img.header__logo {
         font-size: 3.25rem;
         font-weight: 700;
         content: attr(data-content);
+        background-color: var(--nsthemedark__color--primary);
         background-clip: text;
         text-fill-color: transparent;
         -webkit-background-clip: text;
