@@ -166,6 +166,25 @@ img.header__logo {
     }
 }
 
+ul.section__list--emojis {
+    padding-inline-start: 0;
+}
+
+ul.section__list--emojis > li {
+    list-style: none;
+}
+
+ul.section__list--emojis > li.list-item--datamoji:before {
+    content: "🧪"
+}
+
+ul.section__list--emojis > li.list-item--stupidmoji:before {
+    content: "🤨"
+}
+
+ul.section__list--emojis > li.list-item--pizzamoji:before {
+    content: "🍕"
+}
 
 .weird-link {
     position: relative;
