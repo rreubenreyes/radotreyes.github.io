@@ -5,7 +5,7 @@
         <meta name="Description" content="Reuben Reyes is a software engineer based out of San Francisco, CA.">
         <meta name="referrer" content="origin">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reuben Reyes code good</title>
+        <title>reuben reyes</title>
         <link rel="stylesheet" href="src/assets/style.css">
         <link rel="icon" type="image/png" href="src/assets/images/logo.png">
     </head>
@@ -17,63 +17,46 @@
                 src="src/assets/images/logo.svg"
                 alt="Reuben Reyes' personal logo: A shattered, pink/orange-colored gemstone"
                 />
-            <h1 aria-level="1">Reuben Reyes</h1>
         </header>
 
-        <main id="meep" role="main">
+        <main role="main">
+            <section id="get-to-the-point">
+                <header id="intro" data-content="reuben reyes" class="section__header" role="heading" aria-level="2">
+                    <h2>reuben reyes</h2>
+                </header>
+                <p class="section__paragraph">
+                    software, data, platform at <span class="weird-link"><a data-content="human api" href="https://www.humanapi.co/">Human API</a></span>
+                    <ul>
+                        <li>
+                            <code>@rreubenreyes</code> on <span class="weird-link"><a data-content="github" href="https://github.com/rreubenreyes">GitHub</a></span>
+                        </li>
+                        <li>
+                            <code>@rreubenreyes</code> on <span class="weird-link"><a data-content="twitter" href="https://twitter.com/rreubenreyes">Twitter</a></span>
+                        </li>
+                        <li>
+                            <code>reubenreyes</code> on <span class="weird-link"><a data-content="linkedin" href="https://www.linkedin.com/in/reubenreyes/">LinkedIn</a></span>
+                        </li>
+                    </ul>
+                </p>
+            </section>
+
             <section id="about">
-                <header id="intro" data-content="Hi, I'm Reuben" class="section__header" role="heading" aria-level="2">
-                    <h2>Hello, I can code</h2>
-                </header>
-                <p class="section__paragraph">
-                    I'm a Software/Data Engineer at <span class="weird-link"><a data-content="Human API" href="https://www.humanapi.co/">Human API</a></span>. Previously, I've maintained
-                    open-source projects like <span class="weird-link"><a data-content="YDKJS Exercises" href="https://ydkjs-exercises.com/">YDKJS Exercises</a></span> and mentored
-                    at community meetups and events like the
-                    <span class="weird-link">
-                        <a data-content="2018 freeCodeCamp JAMstack Hackathon" href="https://www.freecodecamp.org/news/winners-from-the-2018-freecodecamp-jamstack-hackathon-at-github-2a39bd1db878/#sicc-piccs">
-                            2018 freeCodeCamp JAMstack Hackathon
-                        </a>
-                    </span> and <span class="weird-link"><a data-content="Nodeschool Oakland" href="https://nodeschool.io/oakland/">NodeSchool Oakland</a></span>.
-
-                    <p class="section__paragraph">
-                        Most of my work is on my <span class="weird-link"><a data-content="GitHub" href="https://github.com/rreubenreyes">GitHub</a></span>.
-                        I'm also on <span class="weird-link"><a data-content="LinkedIn" href="https://www.linkedin.com/in/reubenreyes/">LinkedIn</a></span>.
-                    </p>
-                    <p class="section__paragraph">I graduated from San Jose State University.</p>
-                </p>
-            </section>
-
-            <section id="im-not-one-dimensional">
                 <header class="section__header" role="heading" aria-level="1">
-                    <h2>Now here's the rest of the website</h2>
+                    <h2>about</h2>
                 </header>
-
-                <p class="section__paragraph">
-                    I enjoy and occasionally compete in <span class="weird-link"><a data-content="weightlifting" href="https://en.wikipedia.org/wiki/Olympic_weightlifting">weightlifting</a></span>. I am known to be particularly scientific about cooking--that, playing guitar, and writing stupid code are my preferred forms of artistic expression.
-                </p>
-
-                <p class="section__paragraph">
-                    I strangely take inspiration from <span class="weird-link"><a data-content="H.P. Lovecraft" href="https://en.wikipedia.org/wiki/H._P._Lovecraft">H.P. Lovecraft</a></span>
-                    and fictions influenced by his.
-                </p>
+                <p>software engineer for <code id="years-of-experience"></code> years in the San Francisco Bay Area</p>
+                <ul>
+                    <li>distributed systems, serverless, formerly full-stack web, <code>javascript</code>, <code>python</code>, <code>go</code></li>
+                    <li>does powerlifting, plays guitar, likes Lovecraftian stuff</li>
+                    <li>graduated from San Jose State University</li>
+                </ul>
             </section>
-
-            <header class="section__header" role="heading" aria-level="1">
-                <h3>Things I'm into right now</h3>
-            </header>
-            <ul class="section__list section__list--emojis">
-                <li class="list-item--datamoji">&nbsp;&ensp;Designing data-intensive systems</li>
-                <li class="list-item--stupidmoji">
-                    <span class="weird-link">
-                        <a data-content="Writing useless shell scripts" href="https://github.com/rreubenreyes/inspire.sh/blob/master/inspire.sh">&ensp;Writing useless shell scripts</a>
-                    </span>
-                </li>
-                <li class="list-item--pizzamoji">
-                    <span class="weird-link">
-                        <a data-content="Pizza-making" href="https://www.youtube.com/playlist?list=PLnPDn1Lb79JG7zKvGrmBMKDp4hZO8PfYU">&ensp;Pizza-making</a>
-                    </span>
-                </li>
-            </ul>
         </main>
     </body>
+
+    <script>
+        console.log('Everybody can code 🐭. You are a great developer. I believe in you.')
+        const years = (Date.now() - new Date('2019-01-28').getTime()) / (1000 * 60 * 60 * 24 * 7 * 52)
+        document.getElementById('years-of-experience').innerText = years.toFixed(1)
+    </script>
 </html>

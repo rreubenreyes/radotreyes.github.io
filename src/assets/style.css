@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root {
     /* Globals (--g) */
-    --g__bgcolor--brand: #fc4675;
-    --g__color--brand: #fc4675;
+    --g__bgcolor--brand: #fc6b90;
+    --g__color--brand: #fc6b90;
     --g__color--secondary: #84DCCF;
     --g__color--weirdgreen: #C5D86D;
     --g__spacing-block--sm: 0.5rem;
@@ -17,7 +18,7 @@
     /* Dark theme (--nsthemedark) */
     --nsthemedark__bgcolor--primary: #161616;
     --nsthemedark__color--primary: #ccc;
-    --nsthemedark__color--gradient: linear-gradient(135deg, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 50%, rgba(197,216,109,1) 100%);
+    --nsthemedark__color--gradient: linear-gradient(30deg, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 50%, rgba(197,216,109,1) 100%);
 
     /* Light theme (--nsthemelight )*/
     --nsthemelight__bgcolor--primary: #eaeaea;
@@ -45,25 +46,22 @@ h1, h2, h3 {
     background-image: var(--nsthemedark__color--gradient);
 }
 
-h1    { font-size: 2.25rem; line-height: 100% }
-h2    { font-size: 2.0rem }
-h3    { font-size: 1.75rem }
-p, li { font-size: 1rem }
-ul    { padding-inline-start: var(--g__spacing-inline--lg) }
+h1          { font-size: 2.25rem; line-height: 100% }
+h2          { font-size: 2.0rem }
+h3          { font-size: 1.75rem }
+p, li, code { font-size: 1rem }
+code        { font-size: 1.125rem; color: var(--g__color--weirdgreen) }
+ul          { padding-inline-start: var(--g__spacing-inline--lg) }
+code        { font-family: 'Roboto Mono' }
 
 header.portfolio__header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-header.portfolio__header > h1 {
-    justify-self: start;
-    align-self: center;
 }
 
 img.header__logo {
     justify-self: center;
     width: 100%;
+    max-width: 25vw;
     height: auto;
 }
 
@@ -76,12 +74,6 @@ img.header__logo {
     h2    { font-size: 2.5rem }
     h3    { font-size: 2rem }
     p, li { font-size: 1.33rem }
-
-    header.portfolio__header {
-        grid-template-columns: 1fr 2fr;
-        justify-content: center;
-        align-items: center;
-    }
 
     header.portfolio__header > h1 {
         justify-self: center;
@@ -128,14 +120,6 @@ img.header__logo {
         order: 1
     }
 
-    header.portfolio__header {
-        grid-template-columns: 100%;
-    }
-
-    header.portfolio__header > h1 {
-        display: none;
-    }
-
     img.header__logo {
         padding-right: calc(2*var(--g__spacing-inline--xl));
         padding-top: calc(2*var(--g__spacing-inline--xl));
@@ -148,42 +132,6 @@ img.header__logo {
     #intro {
         position: relative;
     }
-
-    #intro > h2 {
-        display: none;
-    }
-
-    #intro::after {
-        font-size: 3.25rem;
-        font-weight: 700;
-        content: attr(data-content);
-        background-color: var(--nsthemedark__color--primary);
-        background-clip: text;
-        text-fill-color: transparent;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-image: var(--nsthemedark__color--gradient);
-    }
-}
-
-ul.section__list--emojis {
-    padding-inline-start: 0;
-}
-
-ul.section__list--emojis > li {
-    list-style: none;
-}
-
-ul.section__list--emojis > li.list-item--datamoji:before {
-    content: "🧪"
-}
-
-ul.section__list--emojis > li.list-item--stupidmoji:before {
-    content: "🤨"
-}
-
-ul.section__list--emojis > li.list-item--pizzamoji:before {
-    content: "🍕"
 }
 
 .weird-link {
