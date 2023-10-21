@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="Description" content="Reuben Reyes is a software engineer based out of San Francisco, CA.">
+        <meta name="referrer" content="origin">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>reuben reyes</title>
+        <link rel="stylesheet" href="src/assets/style.css">
+        <link rel="icon" type="image/png" href="src/assets/images/logo.png">
+    </head>
+
+    <body>
+        <header class="portfolio__header" role="banner">
+            <img
+                class="header__logo"
+                src="src/assets/images/logo.svg"
+                alt="Reuben Reyes' personal logo: A shattered, pink/orange-colored gemstone"
+                />
+        </header>
+
+        <main role="main">
+            <section id="get-to-the-point">
+                <header id="intro" data-content="reuben reyes" class="section__header" role="heading" aria-level="2">
+                    <h2>reuben reyes</h2>
+                </header>
+                <p class="section__paragraph">
+                    building the core platform at <span class="weird-link"><a data-content="human api" href="https://www.humanapi.co/">Human API</a></span>
+                    <ul>
+                        <li>
+                            <code>@rreubenreyes</code> on <span class="weird-link"><a data-content="github" href="https://github.com/rreubenreyes">GitHub</a></span>
+                        </li>
+                        <li>
+                            <code>@rreubenreyes</code> on <span class="weird-link"><a data-content="twitter" href="https://twitter.com/rreubenreyes">Twitter</a></span>
+                        </li>
+                        <li>
+                            <code>reubenreyes</code> on <span class="weird-link"><a data-content="linkedin" href="https://www.linkedin.com/in/reubenreyes/">LinkedIn</a></span>
+                        </li>
+                    </ul>
+                </p>
+            </section>
+
+            <section id="about">
+                <header class="section__header" role="heading" aria-level="1">
+                    <h2>about</h2>
+                </header>
+                <p>software engineer for <code id="years-of-experience">?</code> years, based in the Los Angeles area</p>
+                <ul>
+                    <li>distributed systems, serverless, formerly full-stack web, <code>javascript</code>, <code>python</code>, <code>go</code></li>
+                    <li>does powerlifting, plays guitar, likes Lovecraftian stuff</li>
+                    <li>graduated from San Jose State University</li>
+                </ul>
+            </section>
+        </main>
+    </body>
+
+    <script>
+        console.log('Everybody can code 🐭. You are a great developer. I believe in you.')
+        const years = (Date.now() - new Date('2019-01-28').getTime()) / (1000 * 60 * 60 * 24 * 7 * 52)
+        document.getElementById('years-of-experience').innerText = years.toFixed(1)
+    </script>
+</html>
