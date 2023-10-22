@@ -18,19 +18,19 @@ type DetailedActivity struct {
 	Description string `json:"description,omitempty"`
 }
 
-type Context struct {
+type Client struct {
 	accessToken string
 	url         string
 }
 
-func ListActivities(ctx *Context) []SummaryActivity {
-	url := fmt.Sprintf("%s/v3/athlete/activities", ctx.url)
+func (c Client) ListActivities() []SummaryActivity {
+	url := fmt.Sprintf("%s/v3/athlete/activities", c.url)
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		// TODO: throw here
 		panic(err)
 	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", ctx.accessToken))
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", c.accessToken))
 	req.Header.Add("Accept", "application/json")
 	res, err := http.DefaultClient.Do(req)
 	if err != nil {
@@ -51,14 +51,14 @@ func ListActivities(ctx *Context) []SummaryActivity {
 	return a
 }
 
-func GetActivity(ctx *Context, id string) DetailedActivity {
-	url := fmt.Sprintf("%s/v3/athlete/activities/%s", ctx.url, id)
+func (c Client) GetActivity(id string) DetailedActivity {
+	url := fmt.Sprintf("%s/v3/athlete/activities/%s", c.url, id)
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		// TODO: throw here
 		panic(err)
 	}
-	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", ctx.accessToken))
+	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", c.accessToken))
 	req.Header.Add("Accept", "application/json")
 	res, err := http.DefaultClient.Do(req)
 	if err != nil {

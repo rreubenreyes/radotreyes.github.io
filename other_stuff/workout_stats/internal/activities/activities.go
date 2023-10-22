@@ -40,6 +40,7 @@ type RockClimbingAttempt struct {
 	Sent          bool
 }
 
+// TODO: move the following three functions to business code
 // TODO: Implement
 func parseWeightTrainingSets(s string) []WeightTrainingSet {
 	w := []WeightTrainingSet{}
